@@ -1,0 +1,13 @@
+body {background-color: #6a07bb;}
+
+@media (min-width: 900px) {
+    body {
+        background-color: #650bf5
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        background-color: #42226b
+    }
+}
