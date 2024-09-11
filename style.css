@@ -1,3 +1,8 @@
+/* Scroll Smooth */
+* {
+    scroll-behavior: smooth;
+}
+
 /* Styles de base pour les mobiles */
 body {
     background: linear-gradient(to bottom right, #e6e6fa, #c0c0f0);
@@ -57,54 +62,17 @@ ul {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Ombre portée */
 }
 
-/* Coordonnées et icônes */
-.centered-header address {
-    display: inline-block; /* Affichage en ligne */
-    text-align: center; /* Alignement centré */
-    margin: 0 auto; /* Centrer sur la page */
-    font-style: normal; /* Enlever l'italique par défaut */
-    line-height: 1.8; /* Hauteur de ligne pour l'espacement */
+/* Style pour l'âge sous le nom */
+.age-info {
+    margin-top: -10px; /* Ajustement de l'espace entre le nom et l'âge */
+    font-size: 1.1rem; /* Taille de la police */
+    color: #333; /* Couleur du texte */
+    text-align: center; /* Centrage du texte */
+    margin-bottom: 20px; /* Espacement en bas */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Ombre portée */
 }
 
-/* Style des icônes et du texte */
-.centered-header .icon {
-    margin-right: 10px; /* Espacement après l'icône */
-    font-size: 1.2rem; /* Taille des icônes */
-}
-
-/* Liens vers LinkedIn et GitHub dans l'en-tête */
-.linkedin-link,
-.github-link {
-    display: inline-block; /* Affichage en ligne */
-    font-size: 1.2rem; /* Taille de la police */
-    text-decoration: none; /* Supprimer la décoration de lien */
-    transition: color 0.3s ease; /* Transition de couleur */
-    margin-top: 10px; /* Espacement au-dessus */
-}
-
-.linkedin-link {
-    color: #0077B5; /* Couleur bleue de LinkedIn */
-}
-
-.github-link {
-    color: #333; /* Couleur noire typique de GitHub */
-}
-
-.linkedin-link i,
-.github-link i {
-    margin-right: 8px; /* Espacement entre l'icône et le texte */
-}
-
-/* Effets de survol pour les liens */
-.linkedin-link:hover {
-    color: #005582; /* Couleur plus sombre au survol */
-}
-
-.github-link:hover {
-    color: #24292e; /* Couleur plus sombre au survol */
-}
-
-/* Style de la photo de profil */
+/* Styles pour la photo de profil */
 .profile-photo {
     width: 80%; /* Adapter la taille de la photo de profil pour mobile */
     height: auto; /* Hauteur auto pour garder les proportions */
@@ -114,6 +82,81 @@ ul {
     margin: 20px auto; /* Centrer l'image avec espacement */
     display: block; /* Bloc d'affichage */
     object-fit: cover; /* Ajuste l'image pour remplir le cercle */
+}
+
+/* Styles pour les coordonnées */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px; /* Espacement entre les coordonnées */
+}
+
+/* Style général des éléments de contact */
+.contact-item {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: flex; /* Utilisation de flex pour aligner les icônes et le texte */
+    align-items: center; /* Centre verticalement le contenu */
+    justify-content: center; /* Centre le contenu horizontalement */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px; /* Largeur fixe pour une meilleure mise en page */
+    flex-direction: column; /* Ajoute pour centrer le texte sous l'icône */
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Style des icônes */
+.contact-item .icon {
+    font-size: 1.5rem;
+    margin-bottom: 10px; /* Espace sous l'icône */
+    color: #0077B5; /* Couleur de l'icône */
+}
+
+/* Style des liens de contact */
+.contact-item a {
+    text-decoration: none;
+    color: #0077B5;
+    font-size: 1rem;
+    text-align: center; /* Centre le texte */
+    transition: color 0.3s ease;
+    display: flex; /* Utilisation de flex pour aligner l'icône et le texte */
+    align-items: center; /* Centrer verticalement */
+    justify-content: center; /* Centre le lien à l'intérieur de la boîte */
+    gap: 8px; /* Espacement entre l'icône et le texte */
+}
+
+.contact-item a:hover {
+    color: #005582; /* Couleur plus sombre au survol */
+}
+
+/* Liens vers LinkedIn et GitHub */
+.linkedin-link, .github-link {
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    display: flex; /* Utilisation de flex pour aligner l'icône et le texte */
+    align-items: center; /* Centrer verticalement */
+    margin-left: 0; /* Reset du margin */
+}
+
+.github-link {
+    color: #333; /* Couleur noire typique de GitHub */
+     font-size: 1rem;
+    transition: color 0.3s ease;
+    display: flex; /* Utilisation de flex pour aligner l'icône et le texte */
+    align-items: center; /* Centrer verticalement */
+    margin-left: 0; /* Reset du margin */
+}
+
+.linkedin-link:hover, .github-link:hover {
+    color: #005582; /* Couleur plus sombre au survol */
 }
 
 /* Styles pour les éléments de liste */
@@ -144,7 +187,6 @@ li:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Effets de survol pour les cartes */
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 30px #696969;
@@ -155,7 +197,7 @@ li:hover {
     width: 0; /* Largeur initiale à 0 pour l'animation */
     height: 5px; /* Hauteur du séparateur */
     margin: 30px auto; /* Centrer et espacement au-dessus et en dessous */
-    background: linear-gradient(to right, #D4AF37, #7F00FF); /* Dégradé avec doré doux */
+    background: linear-gradient(to right, #D4AF37, #8A2BE2); /* Dégradé avec doré et violet */
     border-radius: 5px; /* Coins arrondis */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
     opacity: 0; /* Commence invisible */
@@ -219,51 +261,4 @@ li:hover {
         font-size: 1.2rem;
         padding: 40px;
     }
-}
-
-/* Section des coordonnées */
-.contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 20px; /* Espacement entre les coordonnées */
-}
-
-.contact-item {
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    padding: 10px 15px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.contact-item .icon {
-    font-size: 1.5rem;
-    margin-right: 10px;
-    color: #0077B5; /* Couleur de l'icône */
-}
-
-.contact-item p {
-    margin: 0;
-    font-size: 1rem;
-    color: #333;
-}
-
-.contact-item a {
-    text-decoration: none;
-    color: #0077B5;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.contact-item a:hover {
-    color: #005582;
 }
