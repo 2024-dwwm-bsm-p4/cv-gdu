@@ -1,11 +1,12 @@
 /* Styles de base pour les mobiles */
 body {
-    background: linear-gradient(to bottom right, #1A1A40, #2A2A72);
+    background: linear-gradient(to bottom right, #e6e6fa, #c0c0f0);
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 10px;
     /* Réduire le padding pour mobiles */
-    color: #F0F0F0;
+    color: #1A1A40;
+    /* Couleur du texte pour correspondre à un fond plus clair */
     line-height: 1.7;
     font-size: 1rem;
     /* Utiliser une unité relative pour les polices */
@@ -13,16 +14,17 @@ body {
     /* Laisser de la place pour le footer fixe */
 }
 
-/* Titres */
+/* Titres généraux */
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 2.2rem;
     /* Taille du titre pour mobile */
     margin-bottom: 20px;
-    color: #D4AF37;
-    /* Couleur dorée douce */
-    text-shadow: 2px 2px 8px #000000;
+    color: #333;
+    /* Couleur sombre pour une meilleure lisibilité */
+    text-shadow: 2px 2px 8px #FFF;
+    /* Ombre légère pour le contraste */
 }
 
 h2 {
@@ -34,6 +36,7 @@ h2 {
     color: #D4AF37;
     /* Couleur dorée douce */
     text-shadow: 1px 1px 6px #000000;
+    /* Ombre douce */
 }
 
 /* Paragraphes et Listes */
@@ -43,7 +46,7 @@ li {
     font-size: 1rem;
     /* Taille de texte adaptée pour mobile */
     margin-bottom: 15px;
-    color: #E0E0E0;
+    color: #1A1A40;
 }
 
 /* Enlever le style par défaut des puces de liste */
@@ -60,7 +63,7 @@ ul {
     /* Espacement en bas */
 }
 
-/* Style pour le titre principal */
+/* Style pour le titre principal (nom et prénom) */
 .centered-header h1 {
     margin-top: 20px;
     /* Espacement au-dessus */
@@ -68,8 +71,8 @@ ul {
     /* Espacement en dessous */
     font-size: 2.2rem;
     /* Taille du titre */
-    color: #D4AF37;
-    /* Couleur dorée douce */
+    color: #3a3a3a;
+    /* Couleur sombre pour une meilleure lisibilité */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     /* Ombre portée */
 }
@@ -208,8 +211,8 @@ li:hover {
 
 /* Séparateurs entre les sections */
 .separator {
-    width: 80%;
-    /* Largeur du séparateur */
+    width: 0;
+    /* Largeur initiale à 0 pour l'animation */
     height: 5px;
     /* Hauteur du séparateur */
     margin: 30px auto;
@@ -220,25 +223,17 @@ li:hover {
     /* Coins arrondis */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     /* Ombre légère */
-    animation: slide-in 0.8s ease-out;
-    /* Animation d'apparition */
+    opacity: 0;
+    /* Commence invisible */
+    transition: width 0.8s ease-out, opacity 0.8s ease-out;
+    /* Animation sur la largeur et l'opacité */
 }
 
-/* Animation des séparateurs */
-@keyframes slide-in {
-    0% {
-        width: 0;
-        /* Commence avec une largeur de 0 */
-        opacity: 0;
-        /* Commence transparent */
-    }
-
-    100% {
-        width: 80%;
-        /* Terminer avec la largeur définie */
-        opacity: 1;
-        /* Complètement opaque */
-    }
+.separator.animate {
+    width: 80%;
+    /* Largeur maximale à atteindre */
+    opacity: 1;
+    /* Devient complètement opaque */
 }
 
 /* Styles pour le footer */
