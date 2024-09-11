@@ -136,9 +136,10 @@ ul {
     color: #005582; /* Couleur plus sombre au survol */
 }
 
-/* Liens vers LinkedIn et GitHub */
-.linkedin-link, .github-link {
+/* Style spécifique des liens dans .contact-item */
+.contact-item .linkedin-link {
     text-decoration: none;
+    color: #0077B5; /* Couleur bleue de LinkedIn */
     font-size: 1rem;
     transition: color 0.3s ease;
     display: flex; /* Utilisation de flex pour aligner l'icône et le texte */
@@ -146,18 +147,27 @@ ul {
     margin-left: 0; /* Reset du margin */
 }
 
-.github-link {
+/* Lien GitHub */
+.contact-item .github-link {
+    text-decoration: none;
     color: #333; /* Couleur noire typique de GitHub */
-     font-size: 1rem;
+    font-size: 1rem;
     transition: color 0.3s ease;
     display: flex; /* Utilisation de flex pour aligner l'icône et le texte */
     align-items: center; /* Centrer verticalement */
     margin-left: 0; /* Reset du margin */
 }
 
-.linkedin-link:hover, .github-link:hover {
+/* Effets de survol pour les liens */
+.contact-item .linkedin-link:hover {
     color: #005582; /* Couleur plus sombre au survol */
 }
+
+.contact-item .github-link:hover {
+    color: #24292e; /* Couleur plus sombre au survol */
+}
+
+
 
 /* Styles pour les éléments de liste */
 li {
