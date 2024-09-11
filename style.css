@@ -3,202 +3,143 @@ body {
     background: linear-gradient(to bottom right, #e6e6fa, #c0c0f0);
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 10px;
-    /* Réduire le padding pour mobiles */
-    color: #1A1A40;
-    /* Couleur du texte pour correspondre à un fond plus clair */
+    padding: 10px; /* Réduire le padding pour mobiles */
+    color: #1A1A40; /* Couleur du texte adaptée au fond */
     line-height: 1.7;
-    font-size: 1rem;
-    /* Utiliser une unité relative pour les polices */
-    padding-bottom: 70px;
-    /* Laisser de la place pour le footer fixe */
+    font-size: 1rem; /* Utiliser une unité relative pour les polices */
+    padding-bottom: 70px; /* Laisser de la place pour le footer fixe */
 }
 
 /* Titres généraux */
-h1 {
+h1, h2 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 2.2rem;
-    /* Taille du titre pour mobile */
     margin-bottom: 20px;
-    color: #333;
-    /* Couleur sombre pour une meilleure lisibilité */
-    text-shadow: 2px 2px 8px #FFF;
-    /* Ombre légère pour le contraste */
+    text-shadow: 2px 2px 8px #FFF; /* Ombre légère pour le contraste */
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2.2rem; /* Taille du titre pour mobile */
+    color: #333; /* Couleur sombre pour une meilleure lisibilité */
 }
 
 h2 {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 1.8rem;
-    /* Taille du sous-titre pour mobile */
-    margin-bottom: 15px;
-    color: #D4AF37;
-    /* Couleur dorée douce */
-    text-shadow: 1px 1px 6px #000000;
-    /* Ombre douce */
+    font-size: 1.8rem; /* Taille du sous-titre pour mobile */
+    color: #D4AF37; /* Couleur dorée douce */
+    text-shadow: 1px 1px 6px #000000; /* Ombre douce */
 }
 
 /* Paragraphes et Listes */
-p,
-li {
+p, li {
     font-weight: 300;
-    font-size: 1rem;
-    /* Taille de texte adaptée pour mobile */
+    font-size: 1rem; /* Taille de texte adaptée pour mobile */
     margin-bottom: 15px;
     color: #1A1A40;
 }
 
-/* Enlever le style par défaut des puces de liste */
 ul {
-    list-style-type: none;
+    list-style-type: none; /* Enlever les puces de liste */
     padding: 0;
 }
 
 /* En-tête Centré */
 .centered-header {
-    text-align: center;
-    /* Centrer le contenu */
-    margin-bottom: 20px;
-    /* Espacement en bas */
+    text-align: center; /* Centrer le contenu */
+    margin-bottom: 20px; /* Espacement en bas */
 }
 
-/* Style pour le titre principal (nom et prénom) */
+/* Titre principal (nom et prénom) */
 .centered-header h1 {
-    margin-top: 20px;
-    /* Espacement au-dessus */
-    margin-bottom: 20px;
-    /* Espacement en dessous */
-    font-size: 2.2rem;
-    /* Taille du titre */
-    color: #3a3a3a;
-    /* Couleur sombre pour une meilleure lisibilité */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    /* Ombre portée */
+    margin: 20px 0; /* Espacement au-dessus et en dessous */
+    font-size: 2.2rem; /* Taille du titre */
+    color: #3a3a3a; /* Couleur sombre pour une meilleure lisibilité */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Ombre portée */
 }
 
-/* Style pour les coordonnées et les icônes */
+/* Coordonnées et icônes */
 .centered-header address {
-    display: inline-block;
-    /* Affichage en ligne */
-    text-align: center;
-    /* Alignement centré */
-    margin: 0 auto;
-    /* Centrer sur la page */
-    font-style: normal;
-    /* Enlever l'italique par défaut */
-    line-height: 1.8;
-    /* Hauteur de ligne pour l'espacement */
+    display: inline-block; /* Affichage en ligne */
+    text-align: center; /* Alignement centré */
+    margin: 0 auto; /* Centrer sur la page */
+    font-style: normal; /* Enlever l'italique par défaut */
+    line-height: 1.8; /* Hauteur de ligne pour l'espacement */
 }
 
 /* Style des icônes et du texte */
 .centered-header .icon {
-    margin-right: 10px;
-    /* Espacement après l'icône */
-    font-size: 1.2rem;
-    /* Taille des icônes */
+    margin-right: 10px; /* Espacement après l'icône */
+    font-size: 1.2rem; /* Taille des icônes */
 }
 
-/* Lien vers LinkedIn et GitHub dans l'en-tête */
+/* Liens vers LinkedIn et GitHub dans l'en-tête */
 .linkedin-link,
 .github-link {
-    display: inline-block;
-    /* Affichage en ligne */
-    font-size: 1.2rem;
-    /* Taille de la police */
-    text-decoration: none;
-    /* Supprimer la décoration de lien */
-    transition: color 0.3s ease;
-    /* Transition de couleur */
-    margin-top: 10px;
-    /* Espacement au-dessus */
+    display: inline-block; /* Affichage en ligne */
+    font-size: 1.2rem; /* Taille de la police */
+    text-decoration: none; /* Supprimer la décoration de lien */
+    transition: color 0.3s ease; /* Transition de couleur */
+    margin-top: 10px; /* Espacement au-dessus */
 }
 
 .linkedin-link {
-    color: #0077B5;
-    /* Couleur bleue de LinkedIn */
+    color: #0077B5; /* Couleur bleue de LinkedIn */
 }
 
 .github-link {
-    color: #333;
-    /* Couleur noire typique de GitHub */
+    color: #333; /* Couleur noire typique de GitHub */
 }
 
 .linkedin-link i,
 .github-link i {
-    margin-right: 8px;
-    /* Espacement entre l'icône et le texte */
+    margin-right: 8px; /* Espacement entre l'icône et le texte */
 }
 
 /* Effets de survol pour les liens */
 .linkedin-link:hover {
-    color: #005582;
-    /* Couleur plus sombre au survol */
+    color: #005582; /* Couleur plus sombre au survol */
 }
 
 .github-link:hover {
-    color: #24292e;
-    /* Couleur plus sombre au survol */
+    color: #24292e; /* Couleur plus sombre au survol */
 }
 
 /* Style de la photo de profil */
 .profile-photo {
-    width: 80%;
-    /* Adapter la taille de la photo de profil pour mobile */
-    height: auto;
-    /* Hauteur auto pour garder les proportions */
-    border-radius: 50%;
-    /* Arrondir les coins pour un cercle */
-    border: 4px solid #D4AF37;
-    /* Bordure dorée douce */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    /* Ombre portée */
-    margin-bottom: 20px;
-    /* Espacement en bas */
-    display: block;
-    /* Bloc d'affichage */
-    margin-left: auto;
-    /* Centrer l'image */
-    margin-right: auto;
-    /* Centrer l'image */
-    object-fit: cover;
-    /* Ajuste l'image pour remplir le cercle */
+    width: 80%; /* Adapter la taille de la photo de profil pour mobile */
+    height: auto; /* Hauteur auto pour garder les proportions */
+    border-radius: 50%; /* Arrondir les coins pour un cercle */
+    border: 4px solid #D4AF37; /* Bordure dorée douce */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre portée */
+    margin: 20px auto; /* Centrer l'image avec espacement */
+    display: block; /* Bloc d'affichage */
+    object-fit: cover; /* Ajuste l'image pour remplir le cercle */
 }
 
 /* Styles pour les éléments de liste */
 li {
-    background-color: #7F00FF;
-    /* Couleur de fond violet */
+    background-color: #8A2BE2; /* Couleur de fond violet */
     padding: 15px;
     margin-bottom: 15px;
-    border-radius: 12px;
-    /* Coins arrondis */
-    color: #FFFFFF;
-    /* Texte blanc */
+    border-radius: 12px; /* Coins arrondis */
+    color: #FFFFFF; /* Texte blanc */
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px #808080;
-    /* Ombre légère */
+    box-shadow: 0 4px 8px #808080; /* Ombre légère */
 }
 
 li:hover {
-    background-color: #FFE066;
-    /* Changement de couleur de fond */
-    color: #1A1A40;
-    /* Couleur de texte */
-    transform: translateY(-5px) scale(1.02);
-    /* Léger décalage vers le haut */
-    text-shadow: 1px 1px 2px #000000;
-    box-shadow: 0 8px 20px #A9A9A9;
-    /* Ombre plus marquée */
+    background-color: #ffae42; /* Changement de couleur de fond */
+    color: #1A1A40; /* Couleur de texte */
+    transform: translateY(-5px) scale(1.02); /* Léger décalage vers le haut */
+    text-shadow: 1px 1px 2px #000000; /* Ombre légère pour le texte */
+    box-shadow: 0 8px 20px #A9A9A9; /* Ombre plus marquée */
 }
 
 /* Cartes */
 .card {
-    background: rgba(58, 79, 99, 0.9);
-    /* Fond semi-transparent */
+    background: rgba(58, 79, 99, 0.9); /* Fond semi-transparent */
     border-radius: 10px;
-    padding: 20px;
-    /* Padding adapté pour mobile */
+    padding: 20px; /* Padding adapté pour mobile */
     margin-bottom: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -211,29 +152,19 @@ li:hover {
 
 /* Séparateurs entre les sections */
 .separator {
-    width: 0;
-    /* Largeur initiale à 0 pour l'animation */
-    height: 5px;
-    /* Hauteur du séparateur */
-    margin: 30px auto;
-    /* Centrer et espacement au-dessus et en dessous */
-    background: linear-gradient(to right, #D4AF37, #7F00FF);
-    /* Dégradé avec doré doux */
-    border-radius: 5px;
-    /* Coins arrondis */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    /* Ombre légère */
-    opacity: 0;
-    /* Commence invisible */
-    transition: width 0.8s ease-out, opacity 0.8s ease-out;
-    /* Animation sur la largeur et l'opacité */
+    width: 0; /* Largeur initiale à 0 pour l'animation */
+    height: 5px; /* Hauteur du séparateur */
+    margin: 30px auto; /* Centrer et espacement au-dessus et en dessous */
+    background: linear-gradient(to right, #D4AF37, #7F00FF); /* Dégradé avec doré doux */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    opacity: 0; /* Commence invisible */
+    transition: width 0.8s ease-out, opacity 0.8s ease-out; /* Animation sur la largeur et l'opacité */
 }
 
 .separator.animate {
-    width: 80%;
-    /* Largeur maximale à atteindre */
-    opacity: 1;
-    /* Devient complètement opaque */
+    width: 80%; /* Largeur maximale à atteindre */
+    opacity: 1; /* Devient complètement opaque */
 }
 
 /* Styles pour le footer */
@@ -241,8 +172,7 @@ li:hover {
     background-color: #1A1A40;
     text-align: center;
     padding: 20px 0;
-    position: fixed;
-    /* Fixe le footer en bas de la page */
+    position: fixed; /* Fixe le footer en bas de la page */
     bottom: 0;
     width: 100%;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
@@ -251,8 +181,7 @@ li:hover {
 
 /* Bouton de retour en haut */
 .back-to-top {
-    background-color: #D4AF37;
-    /* Bouton avec couleur douce */
+    background-color: #D4AF37; /* Bouton avec couleur douce */
     color: #1A1A40;
     text-decoration: none;
     padding: 10px 20px;
@@ -261,10 +190,8 @@ li:hover {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Effets de survol pour le bouton de retour en haut */
 .back-to-top:hover {
-    background-color: #C8A16A;
-    /* Couleur encore plus douce au survol */
+    background-color: #C8A16A; /* Couleur encore plus douce au survol */
     transform: translateY(-3px);
 }
 
@@ -276,8 +203,7 @@ li:hover {
     }
 
     .profile-photo {
-        width: 150px;
-        /* Taille fixe pour les écrans plus grands */
+        width: 150px; /* Taille fixe pour les écrans plus grands */
         height: 150px;
     }
 
@@ -293,4 +219,51 @@ li:hover {
         font-size: 1.2rem;
         padding: 40px;
     }
+}
+
+/* Section des coordonnées */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px; /* Espacement entre les coordonnées */
+}
+
+.contact-item {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item .icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #0077B5; /* Couleur de l'icône */
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #0077B5;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #005582;
 }
