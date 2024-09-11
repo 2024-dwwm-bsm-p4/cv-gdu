@@ -1,164 +1,263 @@
-/* Base et Typographie */
+/* Styles de base pour les mobiles */
 body {
     background: linear-gradient(to bottom right, #1A1A40, #2A2A72);
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 10px;
+    /* Réduire le padding pour mobiles */
     color: #F0F0F0;
     line-height: 1.7;
-    font-size: 16px;
-    padding-bottom: 70px; /* Laisser de la place pour le footer fixe */
-}
-
-@media (min-width: 900px) {
-    body {
-        font-size: 18px;
-        padding: 20px;
-    }
-}
-
-@media (min-width: 1200px) {
-    body {
-        font-size: 20px;
-        padding: 40px;
-    }
+    font-size: 1rem;
+    /* Utiliser une unité relative pour les polices */
+    padding-bottom: 70px;
+    /* Laisser de la place pour le footer fixe */
 }
 
 /* Titres */
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
+    /* Taille du titre pour mobile */
     margin-bottom: 20px;
-    color: #FFD700;
+    color: #D4AF37;
+    /* Couleur dorée douce */
     text-shadow: 2px 2px 8px #000000;
 }
 
 h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    /* Taille du sous-titre pour mobile */
     margin-bottom: 15px;
-    color: #FFD700;
+    color: #D4AF37;
+    /* Couleur dorée douce */
     text-shadow: 1px 1px 6px #000000;
 }
 
 /* Paragraphes et Listes */
-p, li {
+p,
+li {
     font-weight: 300;
     font-size: 1rem;
+    /* Taille de texte adaptée pour mobile */
     margin-bottom: 15px;
     color: #E0E0E0;
 }
 
+/* Enlever le style par défaut des puces de liste */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
+/* En-tête Centré */
+.centered-header {
+    text-align: center;
+    /* Centrer le contenu */
+    margin-bottom: 20px;
+    /* Espacement en bas */
+}
+
+/* Style pour le titre principal */
+.centered-header h1 {
+    margin-top: 20px;
+    /* Espacement au-dessus */
+    margin-bottom: 20px;
+    /* Espacement en dessous */
+    font-size: 2.2rem;
+    /* Taille du titre */
+    color: #D4AF37;
+    /* Couleur dorée douce */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    /* Ombre portée */
+}
+
+/* Style pour les coordonnées et les icônes */
+.centered-header address {
+    display: inline-block;
+    /* Affichage en ligne */
+    text-align: center;
+    /* Alignement centré */
+    margin: 0 auto;
+    /* Centrer sur la page */
+    font-style: normal;
+    /* Enlever l'italique par défaut */
+    line-height: 1.8;
+    /* Hauteur de ligne pour l'espacement */
+}
+
+/* Style des icônes et du texte */
+.centered-header .icon {
+    margin-right: 10px;
+    /* Espacement après l'icône */
+    font-size: 1.2rem;
+    /* Taille des icônes */
+}
+
+/* Lien vers LinkedIn et GitHub dans l'en-tête */
+.linkedin-link,
+.github-link {
+    display: inline-block;
+    /* Affichage en ligne */
+    font-size: 1.2rem;
+    /* Taille de la police */
+    text-decoration: none;
+    /* Supprimer la décoration de lien */
+    transition: color 0.3s ease;
+    /* Transition de couleur */
+    margin-top: 10px;
+    /* Espacement au-dessus */
+}
+
+.linkedin-link {
+    color: #0077B5;
+    /* Couleur bleue de LinkedIn */
+}
+
+.github-link {
+    color: #333;
+    /* Couleur noire typique de GitHub */
+}
+
+.linkedin-link i,
+.github-link i {
+    margin-right: 8px;
+    /* Espacement entre l'icône et le texte */
+}
+
+/* Effets de survol pour les liens */
+.linkedin-link:hover {
+    color: #005582;
+    /* Couleur plus sombre au survol */
+}
+
+.github-link:hover {
+    color: #24292e;
+    /* Couleur plus sombre au survol */
+}
+
+/* Style de la photo de profil */
+.profile-photo {
+    width: 80%;
+    /* Adapter la taille de la photo de profil pour mobile */
+    height: auto;
+    /* Hauteur auto pour garder les proportions */
+    border-radius: 50%;
+    /* Arrondir les coins pour un cercle */
+    border: 4px solid #D4AF37;
+    /* Bordure dorée douce */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Ombre portée */
+    margin-bottom: 20px;
+    /* Espacement en bas */
+    display: block;
+    /* Bloc d'affichage */
+    margin-left: auto;
+    /* Centrer l'image */
+    margin-right: auto;
+    /* Centrer l'image */
+    object-fit: cover;
+    /* Ajuste l'image pour remplir le cercle */
+}
+
+/* Styles pour les éléments de liste */
 li {
     background-color: #7F00FF;
+    /* Couleur de fond violet */
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 12px;
+    /* Coins arrondis */
     color: #FFFFFF;
+    /* Texte blanc */
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px #808080;
+    /* Ombre légère */
 }
 
 li:hover {
     background-color: #FFE066;
+    /* Changement de couleur de fond */
     color: #1A1A40;
+    /* Couleur de texte */
     transform: translateY(-5px) scale(1.02);
+    /* Léger décalage vers le haut */
     text-shadow: 1px 1px 2px #000000;
     box-shadow: 0 8px 20px #A9A9A9;
-}
-
-/* Photo de Profil */
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid #FFD700;
-    box-shadow: 0 6px 15px #000000;
-    margin-bottom: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    object-fit: cover;
+    /* Ombre plus marquée */
 }
 
 /* Cartes */
 .card {
     background: rgba(58, 79, 99, 0.9);
-    border-radius: 15px;
-    padding: 30px;
-    margin-bottom: 40px;
-    box-shadow: 0 10px 25px #808080;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
+    /* Fond semi-transparent */
+    border-radius: 10px;
+    padding: 20px;
+    /* Padding adapté pour mobile */
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Effets de survol pour les cartes */
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 30px #696969;
 }
 
-.card::after {
-    content: "";
-    display: block;
+/* Séparateurs entre les sections */
+.separator {
     width: 80%;
+    /* Largeur du séparateur */
     height: 5px;
-    margin: 30px auto 0 auto;
-    background: linear-gradient(to right, #FFD700, #7F00FF);
+    /* Hauteur du séparateur */
+    margin: 30px auto;
+    /* Centrer et espacement au-dessus et en dessous */
+    background: linear-gradient(to right, #D4AF37, #7F00FF);
+    /* Dégradé avec doré doux */
     border-radius: 5px;
-    box-shadow: 0 2px 8px #A9A9A9;
+    /* Coins arrondis */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    /* Ombre légère */
     animation: slide-in 0.8s ease-out;
+    /* Animation d'apparition */
 }
 
-/* Effet d'Animation */
+/* Animation des séparateurs */
 @keyframes slide-in {
     0% {
         width: 0;
+        /* Commence avec une largeur de 0 */
         opacity: 0;
+        /* Commence transparent */
     }
+
     100% {
         width: 80%;
+        /* Terminer avec la largeur définie */
         opacity: 1;
+        /* Complètement opaque */
     }
 }
 
-/* En-tête Centré */
-.centered-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.centered-header h1 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.centered-header address {
-    display: inline-block;
-    text-align: center;
-    margin: 0 auto;
-}
-
-/* Footer */
+/* Styles pour le footer */
 .footer {
     background-color: #1A1A40;
     text-align: center;
     padding: 20px 0;
     position: fixed;
+    /* Fixe le footer en bas de la page */
     bottom: 0;
     width: 100%;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
     z-index: 100;
 }
 
+/* Bouton de retour en haut */
 .back-to-top {
-    background-color: #FFD700;
+    background-color: #D4AF37;
+    /* Bouton avec couleur douce */
     color: #1A1A40;
     text-decoration: none;
     padding: 10px 20px;
@@ -167,7 +266,36 @@ li:hover {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Effets de survol pour le bouton de retour en haut */
 .back-to-top:hover {
-    background-color: #E0C200;
+    background-color: #C8A16A;
+    /* Couleur encore plus douce au survol */
     transform: translateY(-3px);
+}
+
+/* Media Queries pour les écrans plus larges */
+@media (min-width: 768px) {
+    body {
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+
+    .profile-photo {
+        width: 150px;
+        /* Taille fixe pour les écrans plus grands */
+        height: 150px;
+    }
+
+    .card {
+        padding: 30px;
+        margin-bottom: 40px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 1.2rem;
+        padding: 40px;
+    }
 }
