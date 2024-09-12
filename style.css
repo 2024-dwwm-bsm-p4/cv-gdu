@@ -3,17 +3,34 @@
     scroll-behavior: smooth;
 }
 
-/* Styles de base pour les mobiles */
+/* Styles de base */
 body {
-    background: linear-gradient(to bottom right, #e6e6fa, #c0c0f0);
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 10px;
+    background: #e6e6fa;
     color: #1A1A40;
-    line-height: 1.7;
-    font-size: 1rem;
-    padding-bottom: 70px;
+    transition: background-color 0.3s, color 0.3s;
 }
+
+/* Mode sombre */
+body.dark-mode {
+    background: #1A1A40; /* Couleur de fond sombre */
+    color: #e6e6fa; /* Couleur de texte clair */
+}
+
+.dark-mode .card {
+    background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent pour les cartes */
+}
+
+.dark-mode .contact-item,
+.dark-mode .linkedin-link,
+.dark-mode .github-link {
+    background-color: #333; /* Couleur de fond sombre pour les boîtes */
+    color: #e6e6fa; /* Couleur de texte clair */
+}
+
+.dark-mode .contact-item a:hover {
+    color: #a0a0ff; /* Changement de couleur au survol */
+}
+
 
 /* Titres généraux */
 h1, h2 {
