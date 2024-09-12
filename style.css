@@ -8,183 +8,178 @@ body {
     background: linear-gradient(to bottom right, #e6e6fa, #c0c0f0);
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 10px; /* Réduire le padding pour mobiles */
-    color: #1A1A40; /* Couleur du texte adaptée au fond */
+    padding: 10px;
+    color: #1A1A40;
     line-height: 1.7;
-    font-size: 1rem; /* Utiliser une unité relative pour les polices */
-    padding-bottom: 70px; /* Laisser de la place pour le footer fixe */
+    font-size: 1rem;
+    padding-bottom: 70px;
 }
 
 /* Titres généraux */
 h1, h2 {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 8px #FFF; /* Ombre légère pour le contraste */
+    text-shadow: 2px 2px 8px #FFF;
 }
 
 h1 {
     font-weight: 700;
-    font-size: 2.2rem; /* Taille du titre pour mobile */
-    color: #333; /* Couleur sombre pour une meilleure lisibilité */
+    font-size: 2.2rem;
+    color: #333;
 }
 
 h2 {
     font-weight: 600;
-    font-size: 1.8rem; /* Taille du sous-titre pour mobile */
-    color: #D4AF37; /* Couleur dorée douce */
-    text-shadow: 1px 1px 6px #000000; /* Ombre douce */
+    font-size: 1.8rem;
+    color: #D4AF37;
+    text-shadow: 1px 1px 6px #000000;
 }
 
 /* Paragraphes et Listes */
 p, li {
     font-weight: 300;
-    font-size: 1rem; /* Taille de texte adaptée pour mobile */
+    font-size: 1rem;
     margin-bottom: 15px;
     color: #1A1A40;
 }
 
 ul {
-    list-style-type: none; /* Enlever les puces de liste */
+    list-style-type: none;
     padding: 0;
 }
 
-/* En-tête Centré */
+/* Header Container */
 .centered-header {
-    text-align: center; /* Centrer le contenu */
-    margin-bottom: 20px; /* Espacement en bas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-/* Conteneur principal pour la disposition flexbox */
-.header-container {
-    display: flex; /* Utilisation de flexbox pour aligner la photo et les infos */
-    align-items: center; /* Centrer verticalement */
-    justify-content: center; /* Centrer horizontalement */
-    gap: 20px; /* Espacement entre la photo et le texte */
-    flex-wrap: wrap; /* Permet d'aller à la ligne si l'espace est limité */
-    margin-bottom: 20px; /* Espacement en bas */
+/* Header Content Layout */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-/* Conteneur pour le nom et l'âge */
-.info-container {
-    text-align: center; /* Centre le texte */
-    margin-bottom: 20px; /* Espacement en bas */
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* Photo de profil */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #D4AF37;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+/* Name and Age */
+.name-age {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Conteneur des informations principales */
+.header-main-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 20px;
+}
+
+/* Contact Information */
+.header-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .social-icons {
+        align-items: flex-end;
+    }
+}
+
+/* Styles pour les réseaux sociaux */
+.social-icons a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+    color: #0077B5;
+}
+
+.github-link:hover {
+    color: #24292e;
+}
+
+.email-link:hover {
+    color: #333;
 }
 
 /* Style pour l'âge sous le nom */
 .age-info {
-    margin-top: -5px; /* Ajuste l'espacement entre le nom et l'âge */
-    font-size: 1rem; /* Taille de la police ajustée */
-    color: #333; /* Couleur du texte */
-    margin-bottom: 0; /* Supprime l'espacement en bas pour un alignement plus propre */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Ombre portée */
-}
-
-/* Styles pour la photo de profil */
-.profile-photo {
-    width: 100px; /* Taille ajustée pour mobile */
-    height: 100px; /* Taille ajustée pour mobile */
-    border-radius: 50%; /* Arrondir les coins pour un cercle */
-    border: 4px solid #D4AF37; /* Bordure dorée douce */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin: 20px auto;
-    object-fit: cover;
-}
-
-/* Coordonnées */
-.contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* Style général des éléments de contact */
-.contact-item {
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    padding: 5px 10px; /* Ajuste le padding pour économiser de l'espace */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: auto; /* Largeur automatique pour s'adapter à la taille du contenu */
-    margin: 0 auto; /* Centre les boîtes horizontalement */
-}
-
-.contact-item .icon {
-    font-size: 1.5rem;
-    margin-right: 5px; /* Espacement réduit entre l'icône et le texte */
-    color: #0077B5;
-}
-
-/* Style des liens de contact */
-.contact-item a {
-    text-decoration: none;
-    color: #0077B5;
-    font-size: 1rem;
-    text-align: center; /* Centre le texte */
-    transition: color 0.3s ease;
-    display: flex; /* Utilisation de flex pour aligner l'icône et le texte */
-    align-items: center; /* Centrer verticalement */
-    justify-content: center; /* Centre le lien à l'intérieur de la boîte */
-    gap: 8px; /* Espacement entre l'icône et le texte */
-}
-
-.contact-item a:hover {
-    color: #005582; /* Couleur plus sombre au survol */
-}
-
-/* Icônes des réseaux sociaux */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px; /* Espacement entre les icônes */
-    margin-top: 10px; /* Espacement au-dessus */
-}
-
-/* Ajuster les styles des icônes des réseaux sociaux */
-.social-icons a {
-    text-decoration: none;
-    color: inherit; /* Garde la couleur originale de l'icône */
-    font-size: 1.5rem; /* Taille des icônes */
-    transition: color 0.3s ease;
-    display: flex; /* Utilisation de flex pour l'alignement */
-    align-items: center; /* Centre verticalement */
-    justify-content: center; /* Centre horizontalement */
-    width: 30px; /* Taille plus petite pour économiser de l'espace */
-    height: 30px; /* Taille plus petite pour économiser de l'espace */
-    margin: 0; /* Réduction de l'espace entre les icônes */
-}
-
-.social-icons a:hover {
-    color: #005582; /* Couleur plus sombre au survol */
+    margin-top: -10px;
+    font-size: 1.1rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* Styles pour les éléments de liste */
 li {
-    background-color: #8A2BE2; /* Couleur de fond violet */
+    background-color: #8A2BE2;
     padding: 15px;
     margin-bottom: 15px;
-    border-radius: 12px; /* Coins arrondis */
-    color: #FFFFFF; /* Texte blanc */
+    border-radius: 12px;
+    color: #FFFFFF;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px #808080; /* Ombre légère */
+    box-shadow: 0 4px 8px #808080;
 }
 
 li:hover {
-    background-color: #ffae42; /* Changement de couleur de fond */
-    color: #1A1A40; /* Couleur de texte */
-    transform: translateY(-5px) scale(1.02); /* Léger décalage vers le haut */
-    text-shadow: 1px 1px 2px #000000; /* Ombre légère pour le texte */
-    box-shadow: 0 8px 20px #A9A9A9; /* Ombre plus marquée */
+    background-color: #ffae42;
+    color: #1A1A40;
+    transform: translateY(-5px) scale(1.02);
+    text-shadow: 1px 1px 2px #000000;
+    box-shadow: 0 8px 20px #A9A9A9;
 }
 
 /* Cartes */
 .card {
-    background: rgba(58, 79, 99, 0.9); /* Fond semi-transparent */
+    background: rgba(58, 79, 99, 0.9);
     border-radius: 10px;
-    padding: 20px; /* Padding adapté pour mobile */
+    padding: 20px;
     margin-bottom: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -196,19 +191,19 @@ li:hover {
 
 /* Séparateurs entre les sections */
 .separator {
-    width: 0; /* Largeur initiale à 0 pour l'animation */
-    height: 5px; /* Hauteur du séparateur */
-    margin: 30px auto; /* Centrer et espacement au-dessus et en dessous */
-    background: linear-gradient(to right, #D4AF37, #8A2BE2); /* Dégradé avec doré et violet */
-    border-radius: 5px; /* Coins arrondis */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
-    opacity: 0; /* Commence invisible */
-    transition: width 0.8s ease-out, opacity 0.8s ease-out; /* Animation sur la largeur et l'opacité */
+    width: 0;
+    height: 5px;
+    margin: 30px auto;
+    background: linear-gradient(to right, #D4AF37, #8A2BE2);
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: width 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 .separator.animate {
-    width: 80%; /* Largeur maximale à atteindre */
-    opacity: 1; /* Devient complètement opaque */
+    width: 80%;
+    opacity: 1;
 }
 
 /* Styles pour le footer */
@@ -216,7 +211,7 @@ li:hover {
     background-color: #1A1A40;
     text-align: center;
     padding: 20px 0;
-    position: fixed; /* Fixe le footer en bas de la page */
+    position: fixed;
     bottom: 0;
     width: 100%;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
@@ -225,7 +220,7 @@ li:hover {
 
 /* Bouton de retour en haut */
 .back-to-top {
-    background-color: #D4AF37; /* Bouton avec couleur douce */
+    background-color: #D4AF37;
     color: #1A1A40;
     text-decoration: none;
     padding: 10px 20px;
@@ -235,7 +230,7 @@ li:hover {
 }
 
 .back-to-top:hover {
-    background-color: #C8A16A; /* Couleur encore plus douce au survol */
+    background-color: #C8A16A;
     transform: translateY(-3px);
 }
 
@@ -247,7 +242,7 @@ li:hover {
     }
 
     .profile-photo {
-        width: 150px; /* Taille fixe pour les écrans plus grands */
+        width: 150px;
         height: 150px;
     }
 
