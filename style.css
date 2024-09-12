@@ -134,18 +134,32 @@ ul {
     transition: color 0.3s ease;
 }
 
-.linkedin-link:hover {
-    color: #0077B5;
+.email-icon {
+    color: #FF5733; /* Couleur par défaut pour l'icône de mail */
+    transition: color 0.3s ease; /* Transition douce */
 }
 
-.github-link:hover {
-    color: #24292e;
+.email-icon:hover {
+    color: #C70039; /* Couleur au survol pour l'icône de mail */
 }
 
-.email-link:hover {
-    color: #333;
+.linkedin-icon {
+    color: #0077B5; /* Couleur par défaut pour LinkedIn */
+    transition: color 0.3s ease;
 }
 
+.linkedin-icon:hover {
+    color: #005582; /* Couleur au survol pour LinkedIn */
+}
+
+.github-icon {
+    color: #333; /* Couleur par défaut pour GitHub */
+    transition: color 0.3s ease;
+}
+
+.github-icon:hover {
+    color: #24292e; /* Couleur au survol pour GitHub */
+}
 /* Style pour l'âge sous le nom */
 .age-info {
     margin-top: -10px;
