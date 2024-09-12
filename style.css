@@ -13,24 +13,52 @@ body {
 /* Mode sombre */
 body.dark-mode {
     background: #1A1A40; /* Couleur de fond sombre */
-    color: #e6e6fa; /* Couleur de texte clair */
+    color: #000000; /* Couleur de texte clair */
+}
+.dark-mode h1{
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 20px;
 }
 
+.dark-mode h1 {
+    font-weight: 700;
+    font-size: 2.2rem;  
+    color: #e6e6fae3;
+}
+.dark-mode li {
+    background-color: #3d086e;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    color: #d6c9c9;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px #808080;}
+
+.dark-mode .name-age {
+    text-align: center;
+    margin-top: 10px;
+    color: #e6e6fae3;
+}
+
+.dark-mode .age-info {
+    margin-top: -10px;
+    font-size: 1.1rem;
+    color: #e6e6fae3;
+}
+.dark-mode .header-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0;
+    background-color: #c9bfbf;
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 .dark-mode .card {
     background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent pour les cartes */
 }
-
-.dark-mode .contact-item,
-.dark-mode .linkedin-link,
-.dark-mode .github-link {
-    background-color: #333; /* Couleur de fond sombre pour les boîtes */
-    color: #e6e6fa; /* Couleur de texte clair */
-}
-
-.dark-mode .contact-item a:hover {
-    color: #a0a0ff; /* Changement de couleur au survol */
-}
-
 
 /* Titres généraux */
 h1, h2 {
