@@ -17,12 +17,17 @@
 <body id="top"> <!-- L'identifiant 'top' permet de revenir en haut de la page avec un lien -->
 
     <div class="container"> <!-- Conteneur principal du contenu de la page -->
-
         <header class="centered-header">
-            <img src="images/Capture_ecran_2024-09-11_091510.png" alt="photo gregoire" class="profile-photo">
-            <h1>Grégoire Dupont</h1>
-            <!-- Nouvelle ligne pour "40 ans" sous le nom -->
-            <p class="age-info">40 ans</p>
+            <div class="header-container">
+                <!-- Photo de profil à gauche -->
+                <img src="images/Capture_ecran_2024-09-11_091510.png" alt="photo gregoire" class="profile-photo">
+                <!-- Informations à droite de la photo -->
+                <div class="info-container">
+                    <h1>Grégoire Dupont</h1>
+                    <p class="age-info">40 ans</p>
+                </div>
+            </div>
+            <!-- Coordonnées et icônes en dessous -->
             <div class="contact-info">
                 <div class="contact-item">
                     <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
@@ -33,25 +38,24 @@
                     <p>06.35.29.11.47</p>
                 </div>
                 <div class="contact-item">
-                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                    <p><a href="mailto:dupontgregoire21@gmail.com">dupontgregoire21@gmail.com</a></p>
-                </div>
-                <div class="contact-item">
                     <span class="icon"><i class="fa-solid fa-car"></i></span>
                     <p>PERMIS B</p>
                 </div>
-                <div class="contact-item">
-                    <a href="https://www.linkedin.com/in/gr%C3%A9goire-dupont-801355328/" target="_blank" class="linkedin-link">
-                        <i class="fa-brands fa-linkedin"></i> Mon LinkedIn
-                    </a>
-                </div>
-                <div class="contact-item">
-                    <a href="https://github.com/RetroGreg" target="_blank" class="github-link">
-                        <i class="fa-brands fa-github"></i> Mon GitHub
-                    </a>
-                </div>
-            </div>  
+            </div>
+            <!-- Icônes des réseaux sociaux -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/gr%C3%A9goire-dupont-801355328/" target="_blank" class="linkedin-link">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="mailto:dupontgregoire21@gmail.com" class="email-link">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://github.com/RetroGreg" target="_blank" class="github-link">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
         </header>
+        
         
 
         <section class="card">

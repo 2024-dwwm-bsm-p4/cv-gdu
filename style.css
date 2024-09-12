@@ -54,69 +54,68 @@ ul {
     margin-bottom: 20px; /* Espacement en bas */
 }
 
-/* Titre principal (nom et prénom) */
-.centered-header h1 {
-    margin: 20px 0; /* Espacement au-dessus et en dessous */
-    font-size: 2.2rem; /* Taille du titre */
-    color: #3a3a3a; /* Couleur sombre pour une meilleure lisibilité */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Ombre portée */
+/* Conteneur principal pour la disposition flexbox */
+.header-container {
+    display: flex; /* Utilisation de flexbox pour aligner la photo et les infos */
+    align-items: center; /* Centrer verticalement */
+    justify-content: center; /* Centrer horizontalement */
+    gap: 20px; /* Espacement entre la photo et le texte */
+    flex-wrap: wrap; /* Permet d'aller à la ligne si l'espace est limité */
+    margin-bottom: 20px; /* Espacement en bas */
+}
+
+/* Conteneur pour le nom et l'âge */
+.info-container {
+    text-align: center; /* Centre le texte */
+    margin-bottom: 20px; /* Espacement en bas */
 }
 
 /* Style pour l'âge sous le nom */
 .age-info {
-    margin-top: -10px; /* Ajustement de l'espace entre le nom et l'âge */
-    font-size: 1.1rem; /* Taille de la police */
+    margin-top: -5px; /* Ajuste l'espacement entre le nom et l'âge */
+    font-size: 1rem; /* Taille de la police ajustée */
     color: #333; /* Couleur du texte */
-    text-align: center; /* Centrage du texte */
-    margin-bottom: 20px; /* Espacement en bas */
+    margin-bottom: 0; /* Supprime l'espacement en bas pour un alignement plus propre */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Ombre portée */
 }
 
 /* Styles pour la photo de profil */
 .profile-photo {
-    width: 80%; /* Adapter la taille de la photo de profil pour mobile */
-    height: auto; /* Hauteur auto pour garder les proportions */
+    width: 100px; /* Taille ajustée pour mobile */
+    height: 100px; /* Taille ajustée pour mobile */
     border-radius: 50%; /* Arrondir les coins pour un cercle */
     border: 4px solid #D4AF37; /* Bordure dorée douce */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre portée */
-    margin: 20px auto; /* Centrer l'image avec espacement */
-    display: block; /* Bloc d'affichage */
-    object-fit: cover; /* Ajuste l'image pour remplir le cercle */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    object-fit: cover;
 }
 
-/* Styles pour les coordonnées */
+/* Coordonnées */
 .contact-info {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
-    gap: 20px; /* Espacement entre les coordonnées */
+    gap: 20px;
 }
 
 /* Style général des éléments de contact */
 .contact-item {
     background-color: #f0f0f0;
     border-radius: 10px;
-    padding: 10px 15px;
-    display: flex; /* Utilisation de flex pour aligner les icônes et le texte */
-    align-items: center; /* Centre verticalement le contenu */
-    justify-content: center; /* Centre le contenu horizontalement */
+    padding: 5px 10px; /* Ajuste le padding pour économiser de l'espace */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 250px; /* Largeur fixe pour une meilleure mise en page */
-    flex-direction: column; /* Ajoute pour centrer le texte sous l'icône */
+    width: auto; /* Largeur automatique pour s'adapter à la taille du contenu */
+    margin: 0 auto; /* Centre les boîtes horizontalement */
 }
 
-.contact-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Style des icônes */
 .contact-item .icon {
     font-size: 1.5rem;
-    margin-bottom: 10px; /* Espace sous l'icône */
-    color: #0077B5; /* Couleur de l'icône */
+    margin-right: 5px; /* Espacement réduit entre l'icône et le texte */
+    color: #0077B5;
 }
 
 /* Style des liens de contact */
@@ -136,38 +135,31 @@ ul {
     color: #005582; /* Couleur plus sombre au survol */
 }
 
-/* Style spécifique des liens dans .contact-item */
-.contact-item .linkedin-link {
-    text-decoration: none;
-    color: #0077B5; /* Couleur bleue de LinkedIn */
-    font-size: 1rem;
-    transition: color 0.3s ease;
-    display: flex; /* Utilisation de flex pour aligner l'icône et le texte */
-    align-items: center; /* Centrer verticalement */
-    margin-left: 0; /* Reset du margin */
+/* Icônes des réseaux sociaux */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacement entre les icônes */
+    margin-top: 10px; /* Espacement au-dessus */
 }
 
-/* Lien GitHub */
-.contact-item .github-link {
+/* Ajuster les styles des icônes des réseaux sociaux */
+.social-icons a {
     text-decoration: none;
-    color: #333; /* Couleur noire typique de GitHub */
-    font-size: 1rem;
+    color: inherit; /* Garde la couleur originale de l'icône */
+    font-size: 1.5rem; /* Taille des icônes */
     transition: color 0.3s ease;
-    display: flex; /* Utilisation de flex pour aligner l'icône et le texte */
-    align-items: center; /* Centrer verticalement */
-    margin-left: 0; /* Reset du margin */
+    display: flex; /* Utilisation de flex pour l'alignement */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    width: 30px; /* Taille plus petite pour économiser de l'espace */
+    height: 30px; /* Taille plus petite pour économiser de l'espace */
+    margin: 0; /* Réduction de l'espace entre les icônes */
 }
 
-/* Effets de survol pour les liens */
-.contact-item .linkedin-link:hover {
+.social-icons a:hover {
     color: #005582; /* Couleur plus sombre au survol */
 }
-
-.contact-item .github-link:hover {
-    color: #24292e; /* Couleur plus sombre au survol */
-}
-
-
 
 /* Styles pour les éléments de liste */
 li {
