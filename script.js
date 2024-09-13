@@ -26,16 +26,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Sélectionne le bouton et ajoute un événement de clic
-document.getElementById('toggle-dark-mode').addEventListener('click', function() {
-// Basculer la classe "dark-mode" sur le corps de la page
-document.body.classList.toggle('dark-mode');
+document.getElementById('toggle-dark-mode').addEventListener('click', function () {
+    // Basculer la classe "dark-mode" sur le corps de la page
+    document.body.classList.toggle('dark-mode');
 
-// Enregistrer le choix de l'utilisateur dans le stockage local
-const isDarkMode = document.body.classList.contains('dark-mode');
-localStorage.setItem('darkMode', isDarkMode);
+    // Enregistrer le choix de l'utilisateur dans le stockage local
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDarkMode);
 });
 
 // Vérifier si l'utilisateur a déjà activé le mode sombre
 if (localStorage.getItem('darkMode') === 'true') {
-document.body.classList.add('dark-mode');
+    document.body.classList.add('dark-mode');
 }

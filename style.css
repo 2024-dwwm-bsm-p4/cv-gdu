@@ -12,40 +12,53 @@ body {
 
 /* Mode sombre */
 body.dark-mode {
-    background: #1A1A40; /* Couleur de fond sombre */
-    color: #e6e6fa; /* Couleur de texte plus clair */
+    background: #1A1A40;
+    /* Couleur de fond sombre */
+    color: #e6e6fa;
+    /* Couleur de texte plus clair */
 }
 
 /* Titres généraux */
-h1, h2 {
+h1,
+h2 {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 8px #000000; /* Uniformiser l'ombre */
+    text-shadow: 2px 2px 8px #000000;
+    /* Uniformiser l'ombre */
 }
 
 h1 {
     font-weight: 700;
-    font-size: 2.5rem; /* Taille légèrement augmentée */
-    color: #D4AF37; /* Couleur dorée pour se démarquer */
+    font-size: 2.5rem;
+    /* Taille légèrement augmentée */
+    color: #D4AF37;
+    /* Couleur dorée pour se démarquer */
 }
 
 h2 {
     font-weight: 600;
-    font-size: 2rem; /* Taille cohérente par rapport à h1 */
-    color: #8A2BE2; /* Couleur pour une variation subtile */
+    font-size: 2rem;
+    color: #8A2BE2;
+    /* Couleur pour une variation subtile */
 }
 
 /* Paragraphes et Listes */
-p, .aboutme, li {
-    font-weight: 400; /* Rendre tous les paragraphes et les éléments de liste cohérents */
-    font-size: 1rem; /* Taille standardisée */
-    color: #1A1A40; /* Couleur de texte principale */
+p,
+.aboutme,
+li {
+    font-weight: 400;
+    font-size: 1rem;
+    /* Taille standardisée */
+    color: #1A1A40;
+    /* Couleur de texte principale */
 }
+
 /* Style pour l'âge sous le nom */
 .age-info {
     margin-top: -10px;
     font-size: 1.1rem;
-    color: #333; /* Couleur pour le mode clair */
+    color: #333;
+    /* Couleur pour le mode clair */
     text-align: center;
     margin-bottom: 20px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
@@ -53,12 +66,17 @@ p, .aboutme, li {
 
 /* Améliorer la lisibilité en mode sombre */
 .dark-mode .age-info {
-    color: #e6e6fa; /* Texte plus clair pour le mode sombre */
-    text-shadow: 2px 2px 8px #000000; /* Garder une ombre pour l'effet visuel */
+    color: #e6e6fa;
+    /* Texte plus clair pour le mode sombre */
+    text-shadow: 2px 2px 8px #000000;
+    /* Garder une ombre pour l'effet visuel */
 }
+
 /* Ombres Douces pour Paragraphes et Listes */
-.aboutme, li {
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Ajouter une ombre douce */
+.aboutme,
+li {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    /* Ajouter une ombre douce */
 }
 
 /* Header Container */
@@ -97,11 +115,13 @@ p, .aboutme, li {
     border-radius: 10px;
     padding: 10px 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #f0f0f0; /* Mode Clair */
+    background-color: #f0f0f0;
+    /* Mode Clair */
 }
 
 .dark-mode .header-middle {
-    background-color: #c9bfbf; /* Mode Sombre */
+    background-color: #c9bfbf;
+    /* Mode Sombre */
 }
 
 /* Photo de profil */
@@ -115,7 +135,8 @@ p, .aboutme, li {
 }
 
 /* Cartes et Listes */
-.card, li {
+.card,
+li {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
@@ -124,7 +145,7 @@ p, .aboutme, li {
 /* Style pour .card */
 .card {
     background: rgba(58, 79, 99, 0.9);
-    color: #ffffff; 
+    color: #ffffff;
     padding: 20px;
     margin-bottom: 30px;
 }
@@ -219,30 +240,37 @@ li:hover {
 }
 
 .email-icon {
-    color: #FF5733; /* Couleur par défaut pour l'icône de mail */
-    transition: color 0.3s ease; /* Transition douce */
+    color: #FF5733;
+    /* Couleur par défaut pour l'icône de mail */
+    transition: color 0.3s ease;
+    /* Transition douce */
 }
 
 .email-icon:hover {
-    color: #C70039; /* Couleur au survol pour l'icône de mail */
+    color: #C70039;
+    /* Couleur au survol pour l'icône de mail */
 }
 
 .linkedin-icon {
-    color: #0077B5; /* Couleur par défaut pour LinkedIn */
+    color: #0077B5;
+    /* Couleur par défaut pour LinkedIn */
     transition: color 0.3s ease;
 }
 
 .linkedin-icon:hover {
-    color: #005582; /* Couleur au survol pour LinkedIn */
+    color: #005582;
+    /* Couleur au survol pour LinkedIn */
 }
 
 .github-icon {
-    color: #333; /* Couleur par défaut pour GitHub */
+    color: #333;
+    /* Couleur par défaut pour GitHub */
     transition: color 0.3s ease;
 }
 
 .github-icon:hover {
-    color: #24292e; /* Couleur au survol pour GitHub */
+    color: #24292e;
+    /* Couleur au survol pour GitHub */
 }
 
 /* Media Queries pour les écrans plus larges */
