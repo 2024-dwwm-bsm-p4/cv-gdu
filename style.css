@@ -13,100 +13,52 @@ body {
 /* Mode sombre */
 body.dark-mode {
     background: #1A1A40; /* Couleur de fond sombre */
-    color: #000000; /* Couleur de texte clair */
-}
-.dark-mode h1{
-        font-family: 'Montserrat', sans-serif;
-        margin-bottom: 20px;
+    color: #e6e6fa; /* Couleur de texte plus clair */
 }
 
-.dark-mode h1 {
-    font-weight: 700;
-    font-size: 2.2rem;  
-    color: #e6e6fae3;
-    text-shadow: 2px 2px 8px #000000;
-}
-.dark-mode .aboutme {
-    color: #d6c9c9
-}
-.dark-mode li {
-    background-color: #3d086e;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 12px;
-    color: #d6c9c9;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px #000000;}
-
-    .dark-mode li:hover {
-        background-color: #a55819;
-        box-shadow: 0 8px 20px #000000;
-    }
-
-.dark-mode .name-age {
-    text-align: center;
-    margin-top: 10px;
-    color: #e6e6fae3;
-}
-
-.dark-mode .age-info {
-    margin-top: -10px;
-    font-size: 1.1rem;
-    color: #e6e6fae3;
-}
-.dark-mode .header-middle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 0;
-    background-color: #c9bfbf;
-    border-radius: 10px;
-    padding: 10px 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.dark-mode .card {
-    background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent pour les cartes */
-}
-.dark-mode .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px #000000;
-}
 /* Titres généraux */
 h1, h2 {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 8px #FFF;
+    text-shadow: 2px 2px 8px #000000; /* Uniformiser l'ombre */
 }
 
 h1 {
     font-weight: 700;
-    font-size: 2.2rem;
-    color: #333;
+    font-size: 2.5rem; /* Taille légèrement augmentée */
+    color: #D4AF37; /* Couleur dorée pour se démarquer */
 }
 
 h2 {
     font-weight: 600;
-    font-size: 1.8rem;
-    color: #D4AF37;
-    text-shadow: 1px 1px 6px #000000;
+    font-size: 2rem; /* Taille cohérente par rapport à h1 */
+    color: #8A2BE2; /* Couleur pour une variation subtile */
 }
 
 /* Paragraphes et Listes */
-
-.aboutme {
-    color: #ffffff;
+p, .aboutme, li {
+    font-weight: 400; /* Rendre tous les paragraphes et les éléments de liste cohérents */
+    font-size: 1rem; /* Taille standardisée */
+    color: #1A1A40; /* Couleur de texte principale */
 }
-p, li {
-    font-weight: 300;
-    font-size: 1rem;
-    margin-bottom: 15px;
-    color: #1A1A40;
+/* Style pour l'âge sous le nom */
+.age-info {
+    margin-top: -10px;
+    font-size: 1.1rem;
+    color: #333; /* Couleur pour le mode clair */
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Améliorer la lisibilité en mode sombre */
+.dark-mode .age-info {
+    color: #e6e6fa; /* Texte plus clair pour le mode sombre */
+    text-shadow: 2px 2px 8px #000000; /* Garder une ombre pour l'effet visuel */
+}
+/* Ombres Douces pour Paragraphes et Listes */
+.aboutme, li {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Ajouter une ombre douce */
 }
 
 /* Header Container */
@@ -135,6 +87,23 @@ ul {
     }
 }
 
+/* Header Middle */
+.header-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0;
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0; /* Mode Clair */
+}
+
+.dark-mode .header-middle {
+    background-color: #c9bfbf; /* Mode Sombre */
+}
+
 /* Photo de profil */
 .profile-photo {
     width: 150px;
@@ -145,31 +114,85 @@ ul {
     margin: 0;
 }
 
-/* Name and Age */
-.name-age {
-    text-align: center;
-    margin-top: 10px;
-}
-
-/* Conteneur des informations principales */
-.header-main-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0 20px;
-}
-
-/* Contact Information */
-.header-middle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 0;
-    background-color: #f0f0f0;
+/* Cartes et Listes */
+.card, li {
     border-radius: 10px;
-    padding: 10px 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Style pour .card */
+.card {
+    background: rgba(58, 79, 99, 0.9);
+    color: #ffffff; 
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px #696969;
+}
+
+/* Style pour li */
+li {
+    background-color: #8A2BE2;
+    padding: 15px;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+}
+
+li:hover {
+    background-color: #ffae42;
+    color: #1A1A40;
+    transform: translateY(-5px) scale(1.02);
+    text-shadow: 1px 1px 2px #000000;
+    box-shadow: 0 8px 20px #A9A9A9;
+}
+
+/* Séparateurs entre les sections */
+.separator {
+    width: 0;
+    height: 5px;
+    margin: 30px auto;
+    background: linear-gradient(to right, #D4AF37, #8A2BE2);
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: width 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.separator.animate {
+    width: 80%;
+    opacity: 1;
+}
+
+/* Styles pour le footer */
+.footer {
+    background-color: #1A1A40;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+/* Bouton de retour en haut */
+.back-to-top {
+    background-color: #D4AF37;
+    color: #1A1A40;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #C8A16A;
+    transform: translateY(-3px);
 }
 
 /* Social Icons */
@@ -220,94 +243,6 @@ ul {
 
 .github-icon:hover {
     color: #24292e; /* Couleur au survol pour GitHub */
-}
-/* Style pour l'âge sous le nom */
-.age-info {
-    margin-top: -10px;
-    font-size: 1.1rem;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-/* Styles pour les éléments de liste */
-li {
-    background-color: #8A2BE2;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 12px;
-    color: #FFFFFF;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px #808080;
-}
-
-li:hover {
-    background-color: #ffae42;
-    color: #1A1A40;
-    transform: translateY(-5px) scale(1.02);
-    text-shadow: 1px 1px 2px #000000;
-    box-shadow: 0 8px 20px #A9A9A9;
-}
-
-/* Cartes */
-.card {
-    background: rgba(58, 79, 99, 0.9);
-    border-radius: 10px;
-    color: #ffffff; 
-    padding: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px #696969;
-}
-
-/* Séparateurs entre les sections */
-.separator {
-    width: 0;
-    height: 5px;
-    margin: 30px auto;
-    background: linear-gradient(to right, #D4AF37, #8A2BE2);
-    border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transition: width 0.8s ease-out, opacity 0.8s ease-out;
-}
-
-.separator.animate {
-    width: 80%;
-    opacity: 1;
-}
-
-/* Styles pour le footer */
-.footer {
-    background-color: #1A1A40;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-    z-index: 100;
-}
-
-/* Bouton de retour en haut */
-.back-to-top {
-    background-color: #D4AF37;
-    color: #1A1A40;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 25px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.back-to-top:hover {
-    background-color: #C8A16A;
-    transform: translateY(-3px);
 }
 
 /* Media Queries pour les écrans plus larges */
