@@ -2,6 +2,52 @@
 * {
     scroll-behavior: smooth;
 }
+/* Menu de Navigation Collant */
+.sticky-nav {
+    position: -webkit-sticky; /* Support Safari */
+    position: sticky; /* Rendre le menu collant */
+    top: 0; /* Position en haut */
+    background-color: #1A1A40; /* Couleur de fond */
+    padding: 10px 0; /* Espacement vertical */
+    z-index: 1000; /* S'assurer que le menu est au-dessus des autres éléments */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre pour distinguer */
+}
+
+.sticky-nav ul {
+    list-style: none; /* Supprimer les puces */
+    display: flex; /* Alignement horizontal */
+    justify-content: center; /* Centrer les éléments */
+    gap: 20px; /* Espacement entre les éléments */
+    margin: 0; /* Supprimer la marge */
+    padding: 0; /* Supprimer le padding */
+}
+
+.sticky-nav ul li {
+    list-style: none;
+    margin: 0; /* Supprimer la marge */
+    padding: 0; /* Supprimer le padding */
+    display: flex; /* Flexbox pour centrer le texte */
+    align-items: center; /* Centrer verticalement */
+    justify-content: center; /* Centrer horizontalement */
+    min-width: 100px; /* Largeur minimum pour éviter le texte trop serré */
+}
+
+.sticky-nav ul li a {
+    list-style: none;
+    color: #e6e6fa; /* Couleur du texte */
+    text-decoration: none; /* Supprimer les soulignements */
+    font-weight: 500; /* Légèrement plus audacieux */
+    padding: 8px 15px; /* Plus de padding pour espacer le texte */
+    border-radius: 20px; /* Coins arrondis pour un effet de bulle */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition de couleur douce */
+    background-color: transparent; /* Fond transparent par défaut */
+}
+
+.sticky-nav ul li a:hover {
+    color: #1A1A40; /* Couleur de survol */
+    background-color: #D4AF37; /* Fond au survol */
+}
+
 
 /* Styles de base */
 body {
@@ -157,6 +203,7 @@ li {
 
 /* Style pour li */
 li {
+    list-style: none;
     background-color: #8A2BE2;
     padding: 15px;
     margin-bottom: 15px;
@@ -271,6 +318,102 @@ li:hover {
 .github-icon:hover {
     color: #24292e;
     /* Couleur au survol pour GitHub */
+}
+/* Style pour le bouton menu hamburger */
+.menu-toggle {
+    display: none; /* Par défaut, le bouton est masqué */
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #1A1A40;
+    color: #e6e6fa;
+    border: none;
+    font-size: 2rem;
+    z-index: 1100; /* Au-dessus du menu collant */
+    cursor: pointer;
+}
+
+/* Menu de Navigation Collant pour Mobile */
+@media (max-width: 768px) {
+    .sticky-nav {
+        display: none; /* Masquer le menu par défaut sur mobile */
+    }
+
+    .menu-toggle {
+        display: block; /* Afficher le bouton hamburger sur mobile */
+    }
+
+    .sticky-nav.active {
+        display: block; /* Afficher le menu quand actif */
+        position: fixed; /* Fixer le menu pour défilement */
+        top: 50px; /* Placer sous le bouton */
+        width: 100%; /* Occupe toute la largeur */
+        background-color: #1A1A40; /* Couleur de fond */
+        padding: 10px 0; /* Espacement vertical */
+        z-index: 1000; /* S'assurer que le menu est au-dessus des autres éléments */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .sticky-nav ul {
+        list-style: none;
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .sticky-nav ul li {
+        width: 100%; 
+        text-align: center; 
+    }
+
+    .sticky-nav ul li a {
+        display: block; 
+        padding: 10px; 
+        font-size: 1rem; 
+        border-radius: 10px; 
+    }
+}
+
+@media (max-width: 1200px) {
+    .sticky-nav {
+        display: none; 
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .sticky-nav.active {
+        display: block;
+        position: fixed;
+        top: 50px; 
+        width: 100%; 
+        background-color: #1A1A40; 
+        padding: 10px 0; 
+        z-index: 1000; 
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    }
+
+    .sticky-nav ul {
+        list-style: none;
+        flex-direction: column; 
+        gap: 10px; 
+        padding: 10px 0; 
+    }
+
+    .sticky-nav ul li {
+        list-style: none;
+        width: 100%; 
+        text-align: center; 
+    }
+
+    .sticky-nav ul li a {
+        list-style: none;
+        display: block; 
+        padding: 15px; 
+        font-size: 1.1rem; 
+        border-radius: 10px; 
+        margin: 5px 0; 
+    }
 }
 
 /* Media Queries pour les écrans plus larges */

@@ -39,3 +39,8 @@ document.getElementById('toggle-dark-mode').addEventListener('click', function (
 if (localStorage.getItem('darkMode') === 'true') {
     document.body.classList.add('dark-mode');
 }
+// Gestion de l'affichage du menu hamburger
+document.getElementById('menu-toggle').addEventListener('click', function () {
+    const menu = document.querySelector('.sticky-nav');
+    menu.classList.toggle('active'); // Ajoute ou retire la classe 'active'
+});
