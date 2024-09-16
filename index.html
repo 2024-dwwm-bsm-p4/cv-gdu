@@ -17,16 +17,13 @@
 
     <!-- Style principal -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body id="top">
-    <!-- MARK: HEADER -->
     <!-- Header -->
     <header class="centered-header">
         <button id="toggle-dark-mode" aria-label="Mode Sombre">🌙</button>
         <div class="header-content">
-            <!-- Photo à gauche -->
             <div class="header-left">
                 <img src="images/Capture_ecran_2024-09-11_091510.webp" alt="photo gregoire" class="profile-photo">
                 <div class="name-age">
@@ -34,9 +31,7 @@
                     <p class="age-info">Développeur web / web mobile</p>
                 </div>
             </div>
-            <!-- Informations au centre -->
             <div class="header-middle">
-                <!-- Informations de contact -->
                 <div class="contact-item">
                     <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
                     <p>9 Rue de la Marne, 62360 CONDETTE</p>
@@ -49,60 +44,48 @@
                     <span class="icon"><i class="fa-solid fa-phone"></i></span>
                     <p>06.35.29.11.47</p>
                 </div>
-                <!-- Liens sociaux -->
                 <div class="header-right social-icons">
-                    <a href="https://www.linkedin.com/in/gr%C3%A9goire-dupont-801355328/" target="_blank"
-                        class="linkedin-link" aria-label="Lien vers le profil LinkedIn de Grégoire Dupont"
-                        title="LinkedIn - Grégoire Dupont">
+                    <a href="https://www.linkedin.com/in/gr%C3%A9goire-dupont-801355328/" target="_blank" class="linkedin-link" aria-label="Lien vers le profil LinkedIn de Grégoire Dupont" title="LinkedIn - Grégoire Dupont">
                         <i class="fa-brands fa-linkedin social-icon linkedin-icon"></i>
                     </a>
-                    <a href="https://github.com/RetroGreg" target="_blank" class="github-link"
-                        aria-label="Lien vers le profil GitHub de Grégoire Dupont" title="GitHub - Grégoire Dupont">
+                    <a href="https://github.com/RetroGreg" target="_blank" class="github-link" aria-label="Lien vers le profil GitHub de Grégoire Dupont" title="GitHub - Grégoire Dupont">
                         <i class="fa-brands fa-github social-icon github-icon"></i>
                     </a>
-                    <a href="mailto:dupontgregoire21@gmail.com" class="email-link"
-                        aria-label="Envoyer un email à Grégoire Dupont" title="Email - Grégoire Dupont">
+                    <a href="mailto:dupontgregoire21@gmail.com" class="email-link" aria-label="Envoyer un email à Grégoire Dupont" title="Email - Grégoire Dupont">
                         <i class="fa-solid fa-envelope email-icon"></i>
                     </a>
                 </div>
             </div>
         </div>
     </header>
- 
-    <!-- MARK: NAVIGATION -->
-    <!-- Menu de Navigation Collant -->
-    <button id="menu-toggle" class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
-    <!-- Navigation avec Icônes -->
-<nav class="sticky-nav">
-    <ul id="menu-items">
-        <li><a href="#aboutme"><i class="fa-solid fa-user"></i> À propos de moi</a></li>
-        <li><a href="#skills"><i class="fa-solid fa-cogs"></i> Compétences</a></li>
-        <li><a href="#projects"><i class="fa-solid fa-code"></i> Projets</a></li>
-        <li><a href="#experiences"><i class="fa-solid fa-briefcase"></i> Expériences Professionnelles</a></li>
-        <li><a href="#formation"><i class="fa-solid fa-graduation-cap"></i> Formation</a></li>
-        <li><a href="#passions"><i class="fa-solid fa-heart"></i> Passions</a></li>
-        <li><a href="#languages"><i class="fa-solid fa-globe"></i> Langues</a></li>
-    </ul>
-</nav>
 
+    <!-- Menu Burger -->
+    <button class="menu-toggle">☰</button>
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="#aboutme">À propos de moi</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#experiences">Expériences Professionnelles</a></li>
+            <li><a href="#formation">Formation</a></li>
+            <li><a href="#passions">Passions</a></li>
+            <li><a href="#languages">Langues</a></li>
+        </ul>
+    </nav>
 
-    <!-- MARK: A PROPOS -->
     <!-- Contenu principal -->
     <section id="aboutme" class="card">
         <h2>À propos de moi</h2>
-        <p class="aboutme">Je suis développeur web en formation. Passionné, motivé, adaptable, et toujours à la
-            recherche de nouveaux défis. J'aime résoudre des problèmes complexes et je suis orienté vers les détails. J'aime collaborer en équipe et je suis toujours prêt à partager mes connaissances et apprendre des autres.</p>
+        <p class="aboutme">Je suis développeur web en formation. Passionné, motivé, adaptable, et toujours à la recherche de nouveaux défis. J'aime résoudre des problèmes complexes et je suis orienté vers les détails. J'aime collaborer en équipe et je suis toujours prêt à partager mes connaissances et apprendre des autres.</p>
     </section>
 
     <div class="separator"></div>
-    
-    <!-- MARK: COMPETENCES -->
-      <!-- Section des compétences -->
-      <section id="skills" class="card">
-          <h2>Champs de compétences</h2>
-          <ul class="skills">
-              <!-- Liste des compétences -->
-              <li>
+
+    <!-- Section des compétences -->
+    <section id="skills" class="card">
+        <h2>Champs de compétences</h2>
+        <ul class="skills">
+            <li>
                 Connaissance des langages :
                 <span style="margin-left: 10px;">
                     <i class="fab fa-html5" style="color: #E34F26; font-size: 1.2rem; vertical-align: middle;"></i> HTML,
@@ -110,18 +93,18 @@
                     <i class="fab fa-js-square" style="color: #F7DF1E; font-size: 1.2rem; vertical-align: middle; margin-left: 5px;"></i> JavaScript
                 </span>
             </li>
-              <li>Installer et configurer son environnement de travail</li>
-              <li>Maquetter des interfaces utilisateur web ou web mobile</li>
-              <li>Développer la partie dynamique des interfaces utilisateur web ou web mobile</li>
-              <li>Mettre en place une base de données relationnelle</li>
-              <li>Développer des composants d’accès aux données SQL et NoSQL</li>
-              <li>Développer des composants métier côté serveur</li>
-              <li>Documenter le déploiement d’une application dynamique web ou web mobile</li>
-          </ul>
+            <li>Installer et configurer son environnement de travail</li>
+            <li>Maquetter des interfaces utilisateur web ou web mobile</li>
+            <li>Développer la partie dynamique des interfaces utilisateur web ou web mobile</li>
+            <li>Mettre en place une base de données relationnelle</li>
+            <li>Développer des composants d’accès aux données SQL et NoSQL</li>
+            <li>Développer des composants métier côté serveur</li>
+            <li>Documenter le déploiement d’une application dynamique web ou web mobile</li>
+        </ul>
       </section>
         <!-- Séparateur entre les sections -->
         <div class="separator"></div>
-       <!-- MARK: PROJETS -->
+    
     <!-- Section des projets -->
     <section id="projects" class="card">
         <h2>Projets</h2>
@@ -135,7 +118,7 @@
 
       <div class="separator"></div>
 
-    <!-- MARK: EXPERIENCES PRO -->
+
     <!-- Section des expériences professionnelles -->
     <section id="experiences" class="card">
         <h2>Expériences Professionnelles</h2>
@@ -177,7 +160,7 @@
     <!-- Séparateur entre les sections -->
     <div class="separator"></div>
 
-    <!-- MARK: FORMATIONS -->
+
     <!-- Section de la formation -->
     <section id="formation" class="card">
         <h2>Formation</h2>
@@ -196,7 +179,7 @@
     <!-- Séparateur entre les sections -->
     <div class="separator"></div>
 
-     <!-- MARK: PASSIONS -->
+  
     <!-- Section des passions -->
     <section id="passions" class="card">
         <h2>Passions</h2>
@@ -211,7 +194,7 @@
     <!-- Séparateur entre les sections -->
     <div class="separator"></div>
 
-    <!-- MARK: LANGUES -->
+  
     <!-- Section des langues -->
     <section id="languages" class="card">
         <h2>Langues</h2>
@@ -221,7 +204,7 @@
         </ul>
     </section>
 
-    <!-- MARK: FOOTER -->
+   
     <!-- Footer avec lien pour retourner en haut de la page -->
     <footer class="footer">
         <a href="#top" class="back-to-top">⬆️ Retour en haut</a>
