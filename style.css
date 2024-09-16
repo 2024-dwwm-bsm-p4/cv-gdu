@@ -1,443 +1,405 @@
 /* Scroll Smooth */
 * {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 /* Menu de Navigation Collant */
 .sticky-nav {
-    position: -webkit-sticky; /* Support Safari */
-    position: sticky; /* Rendre le menu collant */
-    top: 0; /* Position en haut */
-    background-color: #1A1A40; /* Couleur de fond */
-    padding: 10px 0; /* Espacement vertical */
-    z-index: 1000; /* S'assurer que le menu est au-dessus des autres éléments */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre pour distinguer */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #1a1a40;
+  padding: 10px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .sticky-nav ul {
-    list-style: none; /* Supprimer les puces */
-    display: flex; /* Alignement horizontal */
-    justify-content: center; /* Centrer les éléments */
-    gap: 20px; /* Espacement entre les éléments */
-    margin: 0; /* Supprimer la marge */
-    padding: 0; /* Supprimer le padding */
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .sticky-nav ul li {
-    list-style: none;
-    margin: 0; /* Supprimer la marge */
-    padding: 0; /* Supprimer le padding */
-    display: flex; /* Flexbox pour centrer le texte */
-    align-items: center; /* Centrer verticalement */
-    justify-content: center; /* Centrer horizontalement */
-    min-width: 100px; /* Largeur minimum pour éviter le texte trop serré */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
 }
 
 .sticky-nav ul li a {
-    list-style: none;
-    color: #e6e6fa; /* Couleur du texte */
-    text-decoration: none; /* Supprimer les soulignements */
-    font-weight: 500; /* Légèrement plus audacieux */
-    padding: 8px 15px; /* Plus de padding pour espacer le texte */
-    border-radius: 20px; /* Coins arrondis pour un effet de bulle */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transition de couleur douce */
-    background-color: transparent; /* Fond transparent par défaut */
+  list-style: none;
+  color: #e6e6fa;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: transparent;
 }
 
 .sticky-nav ul li a:hover {
-    color: #1A1A40; /* Couleur de survol */
-    background-color: #D4AF37; /* Fond au survol */
+  color: #1a1a40;
+  background-color: #d4af37;
 }
-
 
 /* Styles de base */
 body {
-    background: #e6e6fa;
-    color: #14144ef5;
-    transition: background-color 0.3s, color 0.3s;
+  background: #e6e6fa;
+  color: #14144ef5;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Mode sombre */
 body.dark-mode {
-    background: #1A1A40;
-    /* Couleur de fond sombre */
-    color: #e6e6fa;
-    /* Couleur de texte plus clair */
+  background: #1a1a40;
+  color: #e6e6fa;
 }
 
 /* Titres généraux */
 h1,
 h2 {
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px #000000;
-    /* Uniformiser l'ombre */
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px #000000;
 }
 
 h1 {
-    font-weight: 700;
-    font-size: 2.5rem;
-    /* Taille légèrement augmentée */
-    color: #D4AF37;
-    /* Couleur dorée pour se démarquer */
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #d4af37;
 }
 
 h2 {
-    font-weight: 600;
-    font-size: 2rem;
-    color: #8A2BE2;
-    /* Couleur pour une variation subtile */
+  font-weight: 600;
+  font-size: 2rem;
+  color: #8a2be2;
 }
 
 /* Paragraphes et Listes */
 p,
 .aboutme,
 li {
-    font-weight: 400;
-    font-size: 1rem;
-    /* Taille standardisée */
-    color: #1A1A40;
-    /* Couleur de texte principale */
+  font-weight: 400;
+  font-size: 1rem;
+  color: #1a1a40;
 }
 
 /* Style pour l'âge sous le nom */
 .age-info {
-    margin-top: -10px;
-    font-size: 1.1rem;
-    color: #333;
-    /* Couleur pour le mode clair */
-    text-align: center;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  margin-top: -10px;
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* Améliorer la lisibilité en mode sombre */
 .dark-mode .age-info {
-    color: #e6e6fa;
-    /* Texte plus clair pour le mode sombre */
-    text-shadow: 2px 2px 8px #000000;
-    /* Garder une ombre pour l'effet visuel */
+  color: #e6e6fa;
+  text-shadow: 2px 2px 8px #000000;
 }
 
 /* Ombres Douces pour Paragraphes et Listes */
 .aboutme,
 li {
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-    /* Ajouter une ombre douce */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Header Container */
 .centered-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Header Content Layout */
 .header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 @media (min-width: 768px) {
-    .header-content {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 /* Header Middle */
 .header-middle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 0;
-    border-radius: 10px;
-    padding: 10px 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #f0f0f0;
-    /* Mode Clair */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0;
+  border-radius: 10px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0;
+  /* Mode Clair */
 }
 
 .dark-mode .header-middle {
-    background-color: #c9bfbf;
-    /* Mode Sombre */
+  background-color: #c9bfbf;
+  /* Mode Sombre */
 }
 
 /* Photo de profil */
 .profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid #D4AF37;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #d4af37;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 0;
 }
 
 /* Cartes et Listes */
 .card,
 li {
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 /* Style pour .card */
 .card {
-    background: rgba(58, 79, 99, 0.9);
-    color: #ffffff;
-    padding: 20px;
-    margin-bottom: 30px;
+  background: rgba(58, 79, 99, 0.9);
+  color: #ffffff;
+  padding: 20px;
+  margin-bottom: 30px;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px #696969;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px #696969;
 }
 
 /* Style pour li */
 li {
-    list-style: none;
-    background-color: #8A2BE2;
-    padding: 15px;
-    margin-bottom: 15px;
-    color: #FFFFFF;
+  list-style: none;
+  background-color: #8a2be2;
+  padding: 15px;
+  margin-bottom: 15px;
+  color: #ffffff;
 }
 
 li:hover {
-    background-color: #ffae42;
-    color: #1A1A40;
-    transform: translateY(-5px) scale(1.02);
-    text-shadow: 1px 1px 2px #000000;
-    box-shadow: 0 8px 20px #A9A9A9;
+  background-color: #ffae42;
+  color: #1a1a40;
+  transform: translateY(-5px) scale(1.02);
+  text-shadow: 1px 1px 2px #000000;
+  box-shadow: 0 8px 20px #a9a9a9;
 }
 
 /* Séparateurs entre les sections */
 .separator {
-    width: 0;
-    height: 5px;
-    margin: 30px auto;
-    background: linear-gradient(to right, #D4AF37, #8A2BE2);
-    border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transition: width 0.8s ease-out, opacity 0.8s ease-out;
+  width: 0;
+  height: 5px;
+  margin: 30px auto;
+  background: linear-gradient(to right, #d4af37, #8a2be2);
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: width 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 .separator.animate {
-    width: 80%;
-    opacity: 1;
+  width: 80%;
+  opacity: 1;
 }
 
 /* Styles pour le footer */
 .footer {
-    background-color: #1A1A40;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-    z-index: 100;
+  background-color: #1a1a40;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
 }
 
 /* Bouton de retour en haut */
 .back-to-top {
-    background-color: #D4AF37;
-    color: #1A1A40;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 25px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #d4af37;
+  color: #1a1a40;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .back-to-top:hover {
-    background-color: #C8A16A;
-    transform: translateY(-3px);
+  background-color: #c8a16a;
+  transform: translateY(-3px);
 }
 
 /* Social Icons */
 .social-icons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 @media (min-width: 768px) {
-    .social-icons {
-        align-items: flex-end;
-    }
+  .social-icons {
+    align-items: flex-end;
+  }
 }
 
 /* Styles pour les réseaux sociaux */
 .social-icons a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: inherit;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: inherit;
+  transition: color 0.3s ease;
 }
 
 .email-icon {
-    color: #FF5733;
-    /* Couleur par défaut pour l'icône de mail */
-    transition: color 0.3s ease;
-    /* Transition douce */
+  color: #ff5733;
+  /* Couleur par défaut pour l'icône de mail */
+  transition: color 0.3s ease;
+  /* Transition douce */
 }
 
 .email-icon:hover {
-    color: #C70039;
-    /* Couleur au survol pour l'icône de mail */
+  color: #c70039;
+  /* Couleur au survol pour l'icône de mail */
 }
 
 .linkedin-icon {
-    color: #0077B5;
-    /* Couleur par défaut pour LinkedIn */
-    transition: color 0.3s ease;
+  color: #0077b5;
+  /* Couleur par défaut pour LinkedIn */
+  transition: color 0.3s ease;
 }
 
 .linkedin-icon:hover {
-    color: #005582;
-    /* Couleur au survol pour LinkedIn */
+  color: #005582;
+  /* Couleur au survol pour LinkedIn */
 }
 
 .github-icon {
-    color: #333;
-    /* Couleur par défaut pour GitHub */
-    transition: color 0.3s ease;
+  color: #333;
+  /* Couleur par défaut pour GitHub */
+  transition: color 0.3s ease;
 }
 
 .github-icon:hover {
-    color: #24292e;
-    /* Couleur au survol pour GitHub */
+  color: #24292e;
+  /* Couleur au survol pour GitHub */
 }
 /* Style pour le bouton menu hamburger */
 .menu-toggle {
-    display: none; /* Par défaut, le bouton est masqué */
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: #1A1A40;
-    color: #e6e6fa;
-    border: none;
-    font-size: 2rem;
-    z-index: 1100; /* Au-dessus du menu collant */
-    cursor: pointer;
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #1a1a40;
+  color: #e6e6fa;
+  border: none;
+  font-size: 2rem;
+  z-index: 1100;
+  cursor: pointer;
 }
 
-/* Menu de Navigation Collant pour Mobile */
-@media (max-width: 768px) {
-    .sticky-nav {
-        display: none; /* Masquer le menu par défaut sur mobile */
-    }
-
-    .menu-toggle {
-        display: block; /* Afficher le bouton hamburger sur mobile */
-    }
-
-    .sticky-nav.active {
-        display: block; /* Afficher le menu quand actif */
-        position: fixed; /* Fixer le menu pour défilement */
-        top: 50px; /* Placer sous le bouton */
-        width: 100%; /* Occupe toute la largeur */
-        background-color: #1A1A40; /* Couleur de fond */
-        padding: 10px 0; /* Espacement vertical */
-        z-index: 1000; /* S'assurer que le menu est au-dessus des autres éléments */
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-    }
-
-    .sticky-nav ul {
-        list-style: none;
-        flex-direction: column; 
-        gap: 10px;
-    }
-
-    .sticky-nav ul li {
-        width: 100%; 
-        text-align: center; 
-    }
-
-    .sticky-nav ul li a {
-        display: block; 
-        padding: 10px; 
-        font-size: 1rem; 
-        border-radius: 10px; 
-    }
-}
-
+/* Menu de Navigation Collant pour Mobile et Tablette */
 @media (max-width: 1200px) {
-    .sticky-nav {
-        display: none; 
-    }
+  .sticky-nav {
+    display: none;
+  }
 
-    .menu-toggle {
-        display: block;
-    }
+  .menu-toggle {
+    display: block;
+  }
 
-    .sticky-nav.active {
-        display: block;
-        position: fixed;
-        top: 50px; 
-        width: 100%; 
-        background-color: #1A1A40; 
-        padding: 10px 0; 
-        z-index: 1000; 
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-    }
+  .sticky-nav.active {
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    max-width: 300px;
+    background-color: #1a1a40;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    border-radius: 10px;
+  }
 
-    .sticky-nav ul {
-        list-style: none;
-        flex-direction: column; 
-        gap: 10px; 
-        padding: 10px 0; 
-    }
+  .sticky-nav ul {
+    list-style: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
 
-    .sticky-nav ul li {
-        list-style: none;
-        width: 100%; 
-        text-align: center; 
-    }
+  .sticky-nav ul li {
+    width: 100%;
+    text-align: center;
+  }
 
-    .sticky-nav ul li a {
-        list-style: none;
-        display: block; 
-        padding: 15px; 
-        font-size: 1.1rem; 
-        border-radius: 10px; 
-        margin: 5px 0; 
-    }
+  .sticky-nav ul li a {
+    display: block;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    margin: 5px 0;
+  }
 }
 
-/* Media Queries pour les écrans plus larges */
+/* Styles pour les écrans de taille moyenne */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .sticky-nav.active {
+    left: 15%;
+    right: 15%;
+    width: 70%;
+    max-width: 350px;
+  }
+}
+
+/* Styles pour les écrans plus larges */
 @media (min-width: 768px) {
-    body {
-        font-size: 1.1rem;
-        padding: 20px;
-    }
+  body {
+    font-size: 1.1rem;
+    padding: 20px;
+  }
 
-    .profile-photo {
-        width: 150px;
-        height: 150px;
-    }
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
 
-    .card {
-        padding: 30px;
-        margin-bottom: 40px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    }
+  .card {
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
 }
 
 @media (min-width: 1200px) {
-    body {
-        font-size: 1.2rem;
-        padding: 40px;
-    }
+  body {
+    font-size: 1.2rem;
+    padding: 40px;
+  }
 }
