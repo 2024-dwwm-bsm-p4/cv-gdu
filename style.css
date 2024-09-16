@@ -323,59 +323,66 @@ li:hover {
 
 /* Menu de Navigation Collant pour Mobile et Tablette */
 @media (max-width: 1200px) {
-  .sticky-nav {
-    display: none;
-  }
+    .sticky-nav {
+        display: none;
+    }
 
-  .menu-toggle {
-    display: block;
-  }
+    .menu-toggle {
+        display: block;
+    }
 
-  .sticky-nav.active {
-    display: block;
-    position: fixed;
-    top: 50px;
-    left: 10%;
-    right: 10%;
-    width: 80%;
-    max-width: 300px;
-    background-color: #1a1a40;
-    padding: 10px 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-    border-radius: 10px;
-  }
+    .sticky-nav.active {
+        display: block;
+        position: fixed;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
+        max-width: 300px;
+        background-color: rgba(26, 26, 64, 0.9);
+        padding: 15px 10px;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+    }
 
-  .sticky-nav ul {
-    list-style: none;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px 0;
-  }
+    .sticky-nav ul {
+        list-style: none;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+    }
 
-  .sticky-nav ul li {
-    width: 100%;
-    text-align: center;
-  }
+    .sticky-nav ul li {
+        width: 100%;
+        text-align: center;
+    }
 
-  .sticky-nav ul li a {
-    display: block;
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 10px;
-    margin: 5px 0;
-  }
+    .sticky-nav ul li a {
+        display: block;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+        color: #e6e6fa;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
 }
 
 /* Styles pour les écrans de taille moyenne */
 @media (min-width: 768px) and (max-width: 1200px) {
-  .sticky-nav.active {
-    left: 15%;
-    right: 15%;
-    width: 70%;
-    max-width: 350px;
-  }
+    .sticky-nav.active {
+        width: 70%; 
+        max-width: 350px;
+        padding: 15px;
+    }
+
+    .sticky-nav ul li a {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
 }
 
 /* Styles pour les écrans plus larges */
