@@ -22,7 +22,7 @@
         <div class="header-content">
             <!-- Photo à gauche -->
             <div class="header-left">
-                <img src="images/Capture_ecran_2024-09-11_091510.png" alt="photo gregoire" class="profile-photo">
+                <img src="C:\Users\super\OneDrive\Bureau\Projets\CV\images\Capture_ecran_2024-09-11_091510.webp" alt="photo gregoire" class="profile-photo">
                 <div class="name-age">
                     <h1>Grégoire Dupont</h1>
                     <p class="age-info">Développeur web / web mobile</p>
@@ -66,24 +66,26 @@
     <!-- MARK: NAVIGATION -->
     <!-- Menu de Navigation Collant -->
     <button id="menu-toggle" class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
-    <nav class="sticky-nav">
-        <ul id="menu-items">
-            <li><a href="#aboutme">À propos de moi</a></li>
-            <li><a href="#experiences">Expériences Professionnelles</a></li>
-            <li><a href="#formation">Formation</a></li>
-            <li><a href="#projects">Projets</a></li>
-            <li><a href="#skills">Compétences</a></li>
-            <li><a href="#passions">Passions</a></li>
-            <li><a href="#languages">Langues</a></li>
-        </ul>
-    </nav>
+    <!-- Navigation avec Icônes -->
+<nav class="sticky-nav">
+    <ul id="menu-items">
+        <li><a href="#aboutme"><i class="fa-solid fa-user"></i> À propos de moi</a></li>
+        <li><a href="#skills"><i class="fa-solid fa-cogs"></i> Compétences</a></li>
+        <li><a href="#projects"><i class="fa-solid fa-code"></i> Projets</a></li>
+        <li><a href="#experiences"><i class="fa-solid fa-briefcase"></i> Expériences Professionnelles</a></li>
+        <li><a href="#formation"><i class="fa-solid fa-graduation-cap"></i> Formation</a></li>
+        <li><a href="#passions"><i class="fa-solid fa-heart"></i> Passions</a></li>
+        <li><a href="#languages"><i class="fa-solid fa-globe"></i> Langues</a></li>
+    </ul>
+</nav>
+
 
     <!-- MARK: A PROPOS -->
     <!-- Contenu principal -->
     <section id="aboutme" class="card">
         <h2>À propos de moi</h2>
         <p class="aboutme">Je suis développeur web en formation. Passionné, motivé, adaptable, et toujours à la
-            recherche de nouveaux défis.</p>
+            recherche de nouveaux défis. J'aime résoudre des problèmes complexes et je suis orienté vers les détails. J'aime collaborer en équipe et je suis toujours prêt à partager mes connaissances et apprendre des autres.</p>
     </section>
 
     <div class="separator"></div>
@@ -94,7 +96,14 @@
           <h2>Champs de compétences</h2>
           <ul class="skills">
               <!-- Liste des compétences -->
-              <li>Connaissance des languages : HTML CSS JAVASCRIPT </li>
+              <li>
+                Connaissance des langages :
+                <span style="margin-left: 10px;">
+                    <i class="fab fa-html5" style="color: #E34F26; font-size: 1.2rem; vertical-align: middle;"></i> HTML,
+                    <i class="fab fa-css3-alt" style="color: #1572B6; font-size: 1.2rem; vertical-align: middle; margin-left: 5px;"></i> CSS,
+                    <i class="fab fa-js-square" style="color: #F7DF1E; font-size: 1.2rem; vertical-align: middle; margin-left: 5px;"></i> JavaScript
+                </span>
+            </li>
               <li>Installer et configurer son environnement de travail</li>
               <li>Maquetter des interfaces utilisateur web ou web mobile</li>
               <li>Développer la partie dynamique des interfaces utilisateur web ou web mobile</li>
@@ -181,26 +190,13 @@
     <!-- Séparateur entre les sections -->
     <div class="separator"></div>
 
-    <!-- MARK: PROJETS -->
-    <!-- Section des projets -->
-    <section id="projects" class="card">
-        <h2>Projets</h2>
-        <ul>
-            <!-- Liste des projets -->
-            <li>Programmation en C# d'un jeu d'allumettes "Match Master"</li>
-        </ul>
-    </section>
-
-    <!-- Séparateur entre les sections -->
-    <div class="separator"></div>
-    
      <!-- MARK: PASSIONS -->
     <!-- Section des passions -->
     <section id="passions" class="card">
         <h2>Passions</h2>
         <ul>
             <li>Informatique</li>
-            <li>Jeux vidéos</li>
+            <li>Jeux vidéo</li>
             <li>Arts Créatifs</li>
             <li>Univers pop culture</li>
         </ul>
@@ -219,7 +215,6 @@
         </ul>
     </section>
 
-    </div>
     <!-- MARK: FOOTER -->
     <!-- Footer avec lien pour retourner en haut de la page -->
     <footer class="footer">
