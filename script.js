@@ -32,19 +32,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Gestion du mode sombre
-  const toggleDarkModeButton = document.getElementById("toggle-dark-mode");
-
-  toggleDarkModeButton.addEventListener("click", function () {
+  document.querySelector(".theme-switch__checkbox").addEventListener("change", function () {
+    console.log("Checkbox changed");
     document.body.classList.toggle("dark-mode");
-    const isDarkMode = document.body.classList.contains("dark-mode");
-    localStorage.setItem("darkMode", isDarkMode);
+    if (this.checked) {
+      localStorage.setItem('darkMode', true);
+      console.log('dark mode true')
+    }
+    else {
+      localStorage.setItem('darkMode', false);
+      console.log('dark mode false')
+    }
   });
-
-  if (localStorage.getItem("darkMode") === "true") {
-    document.body.classList.add("dark-mode");
-  }
-});
+  
+    // Vérifie l'état du mode sombre à partir du stockage local
+    if (localStorage.getItem('darkMode') === 'true') {
+      console.log('Mode sombre activé au chargement');
+      document.body.classList.add('dark-mode');
+      themeSwitch.checked = true; 
+    }
+      // Enregistre la préférence de l'utilisateur dans le stockage local
+      const isDarkMode = document.body.classList.contains('dark-mode');
+      
+    });
+  
  // Defilement doux
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
