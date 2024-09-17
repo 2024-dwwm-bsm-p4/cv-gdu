@@ -24,7 +24,7 @@ body.dark-mode h2{
 }
 
 body.dark-mode p {
-  color:brown
+  color: #e0e0e0
 }
 
 body.dark-mode .card {
@@ -54,7 +54,7 @@ body.dark-mode h2 {
 }
 
 body.dark-mode p.aboutme {
-  color: #E0E0E0;
+  color: #f5f5f5;
 }
 
 /* En-têtes */
@@ -132,7 +132,7 @@ p, .aboutme, li {
 }
 
 .dark-mode .header-middle {
-  background-color: #c9bfbf;
+  background-color: #3a3a3a;
 }
 
 .profile-photo {
