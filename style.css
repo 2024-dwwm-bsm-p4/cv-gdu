@@ -105,6 +105,10 @@ p, .aboutme, li {
   margin: 0;
 }
 
+.email-link {
+  text-decoration : none;
+}
+
 /* Cartes et éléments de liste */
 .card, li {
   border-radius: 10px;
@@ -115,9 +119,10 @@ p, .aboutme, li {
 .card {
   background: #ffffff;
   color: #1a1a1a;
-  padding: 25px;
-  margin-bottom: 40px;
-  border-radius: 12px;
+  max-width: 1200px; 
+  margin: 20px auto; 
+  padding: 30px; 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .dark-mode .card {
@@ -235,7 +240,7 @@ p, .aboutme, li {
 }
 
 .separator.animate {
-  width: 80%;
+  width: 60%;
   opacity: 1;
 }
 
