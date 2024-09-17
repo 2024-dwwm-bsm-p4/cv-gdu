@@ -1,8 +1,4 @@
-/* Scroll Smooth */
-* {
-  scroll-behavior: smooth;
-}
-/* Menu de Navigation Collant */
+/* Style de base */
 * {
   scroll-behavior: smooth;
 }
@@ -10,16 +6,20 @@
 body {
   background: #f0f0f5;
   color: #1a1a1a;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
   transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode {
-  background: #1a1a40;
+  background: #1a1a40; 
   color: #e6e6fa;
 }
 
+/* En-têtes */
 h1, h2 {
-  font-family: "Montserrat", sans-serif;
   margin-bottom: 20px;
   color: #0b3d91;
   text-shadow: none;
@@ -55,6 +55,7 @@ p, .aboutme, li {
   text-shadow: 2px 2px 8px #000000;
 }
 
+/* Header */
 .centered-header {
   display: flex;
   flex-direction: column;
@@ -96,14 +97,15 @@ p, .aboutme, li {
 }
 
 .profile-photo {
-  width: 225px;
-  height: 225px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 4px solid #d4af37;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   margin: 0;
 }
 
+/* Cartes et éléments de liste */
 .card, li {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -111,19 +113,16 @@ p, .aboutme, li {
 }
 
 .card {
-  background: #ffffff; 
+  background: #ffffff;
   color: #1a1a1a;
   padding: 25px;
   margin-bottom: 40px;
   border-radius: 12px;
 }
 
-.card h2 {
-  color: #0b3d91; 
-}
-
-.card p, .card li {
-  color: #1a1a1a; 
+.dark-mode .card {
+  background-color: #4a4e69; 
+  color: #f2e9e4;
 }
 
 .card:hover {
@@ -131,7 +130,8 @@ p, .aboutme, li {
   box-shadow: 0 15px 30px #696969;
 }
 
-.skills li {
+.skills li, ul li {
+  list-style: none;
   background-color: #e6f7ff;
   color: #003366;
   padding: 10px 15px;
@@ -140,17 +140,19 @@ p, .aboutme, li {
   transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
-.skills li:hover {
+.skills li:hover, ul li:hover {
   background-color: #cce7ff;
   transform: translateY(-5px);
 }
 
+/* Menu Burger */
+/* Style global pour le menu burger */
 .menu-toggle {
   display: block;
   position: fixed;
   top: 10px;
   right: 10px;
-  background-color: #1a1a40;
+  background-color: #1a1a40;  
   color: #e6e6fa;
   border: none;
   font-size: 2rem;
@@ -158,15 +160,16 @@ p, .aboutme, li {
   cursor: pointer;
 }
 
+/* Style du menu burger */
 .sticky-nav {
-  display: none;
+  display: none; 
   position: fixed;
   top: 60px;
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 40px);
   max-width: 300px;
-  background-color: rgba(26, 26, 64, 0.95);
+  background-color: rgba(26, 26, 64, 0.95); 
   padding: 15px 0;
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -175,7 +178,7 @@ p, .aboutme, li {
 }
 
 .sticky-nav.active {
-  display: block;
+  display: block; 
 }
 
 .sticky-nav ul {
@@ -188,23 +191,38 @@ p, .aboutme, li {
 .sticky-nav ul li {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: calc(100% - 20px);
   max-width: 260px;
   margin: 10px auto;
   padding: 15px;
-  background-color: #4a4e69;
-  color: #f2e9e4;
+  background-color: #4a4e69; /* Couleur de fond des éléments */
+  color: #f2e9e4; /* Couleur du texte des éléments */
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  text-align: center; /* Centre le texte */
+}
+
+.sticky-nav ul li a {
+  color: #f2e9e4; /* Couleur de texte des liens */
+  text-decoration: none; /* Supprime la sous-ligne des liens */
+  width: 100%;
+  padding: 15px;
+  display: block;
 }
 
 .sticky-nav ul li:hover {
-  background-color: #9a8c98;
-  color: #22223b;
+  background-color: #9a8c98; /* Couleur de fond au survol */
+  color: #22223b; /* Couleur du texte au survol */
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
+.sticky-nav ul li a:hover {
+  color: #22223b; /* Couleur du texte au survol des liens */
+}
+
+/* Séparateur */
 .separator {
   width: 0;
   height: 5px;
@@ -221,6 +239,7 @@ p, .aboutme, li {
   opacity: 1;
 }
 
+/* Footer */
 .footer {
   background-color: #1a1a40;
   text-align: center;
@@ -230,6 +249,11 @@ p, .aboutme, li {
   width: 100%;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
   z-index: 100;
+}
+
+.dark-mode .footer {
+  background-color: #4a4e69; 
+  color: #f2e9e4;
 }
 
 .back-to-top {
@@ -247,6 +271,7 @@ p, .aboutme, li {
   transform: translateY(-3px);
 }
 
+/* Icônes de réseaux sociaux */
 .social-icons {
   display: flex;
   flex-direction: row;
@@ -255,9 +280,11 @@ p, .aboutme, li {
   margin-top: 10px;
 }
 
+/* Media Queries */
+/* Ajustements pour les écrans moyens (tablettes) */
 @media (max-width: 1200px) {
   .sticky-nav {
-    display: none;
+    display: none; 
   }
 
   .menu-toggle {
@@ -290,398 +317,28 @@ p, .aboutme, li {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+/* Styles pour les écrans de bureau (large) */
+@media (min-width: 1200px) {
+  .sticky-nav {
+    display: none; 
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
   .sticky-nav.active {
-    width: 70%;
-    max-width: 350px;
-    padding: 15px;
-  }
-
-  .sticky-nav ul li a {
-    font-size: 1rem;
-    padding: 12px 20px;
-  }
-}
-
-@media (min-width: 768px) {
-  body {
-    font-size: 1.1rem;
-    padding: 20px;
-  }
-
-  .profile-photo {
-    width: 225px;
-    height: 225px;
-  }
-
-  .card {
-    padding: 30px;
-    margin-bottom: 40px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    display: block; 
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    background-color: rgba(26, 26, 64, 0.9);
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
   }
 }
 
-@media (min-width: 1200px) {
-  body {
-    font-size: 1.2rem;
-    padding: 40px;
-  }
-}
-
-/* Styles de base */
-body {
-  background: #f0f0f5;
-  color: #1a1a1a;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Mode sombre */
-body.dark-mode {
-  background: #1a1a40;
-  color: #e6e6fa;
-}
-
-/* Titres généraux */
-h1,
-h2 {
-  font-family: "Montserrat", sans-serif;
-  margin-bottom: 20px;
-  color: #0b3d91;
-  text-shadow: none;
-}
-
-h1 {
-  font-weight: 700;
-  font-size: 2.5rem;
-  color: #0b3d91;
-}
-
-h2 {
-  font-weight: 600;
-  font-size: 2rem;
-  color: #0b3d91;
-}
-
-/* Paragraphes et Listes */
-p,
-.aboutme,
-li {
-  font-weight: 400;
-  font-size: 1rem;
-  color: #1a1a40;
-}
-
-/* Style pour l'âge sous le nom */
-.age-info {
-  margin-top: -10px;
-  font-size: 1.1rem;
-  color: #333;
-  text-align: center;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-/* Améliorer la lisibilité en mode sombre */
-.dark-mode .age-info {
-  color: #e6e6fa;
-  text-shadow: 2px 2px 8px #000000;
-}
-
-/* Ombres Douces pour Paragraphes et Listes */
-.aboutme,
-li {
-  color:#E6E6FA;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Header Container */
-.centered-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* Header Content Layout */
-.header-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-@media (min-width: 768px) {
-  .header-content {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-/* Header Middle */
-.header-middle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-top: 0;
-  border-radius: 10px;
-  padding: 10px 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #f0f0f0;
-  /* Mode Clair */
-}
-
-.dark-mode .header-middle {
-  background-color: #c9bfbf;
-  /* Mode Sombre */
-}
-
-/* Photo de profil */
-.profile-photo {
-  width: 225px;
-  height: 225px;
-  border-radius: 50%;
-  border: 4px solid #d4af37;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin: 0;
-}
-
-/* Cartes et Listes */
-.card,
-li {
-  text-decoration: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background-color 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-/* Style pour .card */
-.card {
-  text-decoration: none;
-  background: #ffffff; 
-  color: #1a1a1a;
-  padding: 25px;
-  margin-bottom: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-}
-
-.card h2 {
-  color: #0b3d91; 
-}
-
-.card p, .card li {
-  color: #1a1a1a; 
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px #696969;
-}
-/* Style des compétences */
-.skills li {
-  text-decoration: none;
-  background-color: #e6f7ff; 
-  color: #003366; 
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  transition: transform 0.2s ease, background-color 0.3s ease;
-}
-
-.skills li:hover {
-  background-color: #cce7ff; 
-  transform: translateY(-5px);
-}
-/* Style pour ul li */
-ul li {
-  list-style: none;
-  background-color: #e6f7ff; 
-  color: #003366;
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  transition: transform 0.2s ease, background-color 0.3s ease;
-}
-
-ul li:hover {
-  background-color: #cce7ff;
-  transform: translateY(-5px);
-}
-
-/* Séparateurs entre les sections */
-.separator {
-  width: 0;
-  height: 5px;
-  margin: 30px auto;
-  background: linear-gradient(to right, #d4af37, #8a2be2);
-  border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transition: width 0.8s ease-out, opacity 0.8s ease-out;
-}
-
-.separator.animate {
-  width: 80%;
-  opacity: 1;
-}
-
-/* Styles pour le footer */
-.footer {
-  background-color: #1a1a40;
-  text-align: center;
-  padding: 20px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-  z-index: 100;
-}
-
-/* Bouton de retour en haut */
-.back-to-top {
-  background-color: #d4af37;
-  color: #1a1a40;
-  text-decoration: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 25px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.back-to-top:hover {
-  background-color: #c8a16a;
-  transform: translateY(-3px);
-}
-
-/* Social Icons */
-.social-icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-@media (min-width: 768px) {
-  .social-icons {
-    align-items: flex-end;
-  }
-}
-
-/* Style pour le bouton menu hamburger */
-.menu-toggle {
-  display: block;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  background-color: #1a1a40;
-  color: #e6e6fa;
-  border: none;
-  font-size: 2rem;
-  z-index: 1100;
-  cursor: pointer;
-}
-
-/* Menu de Navigation Collant pour Mobile et Tablette */
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .sticky-nav.active {
-        display: block;
-        position: fixed;
-        top: 60px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 85%;
-        max-width: 300px;
-        background-color: rgba(26, 26, 64, 0.9);
-        padding: 15px 10px;
-        z-index: 1000;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .sticky-nav ul {
-        list-style: none;
-        flex-direction: column;
-        gap: 10px;
-        padding: 0;
-        margin: 0;
-    }
-
-    .sticky-nav ul li {
-        width: 100%;
-        text-align: center;
-        list-style: none;
-        background-color: #4a4e69; 
-        padding: 15px;
-        margin-bottom: 15px;
-        color: #f2e9e4; 
-        border-radius: 8px;
-        transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    }
-    .sticky-nav ul li:hover {
-      background-color: #9a8c98; 
-      color: #f2e9e4; 
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
-      text-shadow: none; 
-    }
-    .sticky-nav ul li a {
-        display: block;
-        padding: 10px 15px;
-        font-size: 0.9rem;
-        color: #e6e6fa;
-        border-radius: 6px;
-        text-decoration: none;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-
-/* Styles pour les écrans de taille moyenne */
-@media (min-width: 768px) and (max-width: 1200px) {
-    .sticky-nav.active {
-        width: 70%; 
-        max-width: 350px;
-        padding: 15px;
-    }
-
-    .sticky-nav ul li a {
-        font-size: 1rem;
-        padding: 12px 20px;
-    }
-}
-
-/* Styles pour les écrans plus larges */
-@media (min-width: 768px) {
-  body {
-    font-size: 1.1rem;
-    padding: 20px;
-  }
-
-  .profile-photo {
-    width: 225px;
-    height: 225px;
-  }
-
-  .card {
-    padding: 30px;
-    margin-bottom: 40px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  }
-}
-
-@media (min-width: 1200px) {
-  body {
-    font-size: 1.2rem;
-    padding: 40px;
-  }
-}
