@@ -286,7 +286,6 @@ p, .aboutme, li {
 }
 
 /* Media Queries */
-/* Ajustements pour les écrans moyens (tablettes) */
 @media (max-width: 1200px) {
   .sticky-nav {
     display: none; 
@@ -346,4 +345,3 @@ p, .aboutme, li {
     border-radius: 10px;
   }
 }
-
