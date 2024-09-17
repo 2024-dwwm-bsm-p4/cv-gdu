@@ -19,9 +19,12 @@ body.dark-mode {
 }
 
 body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode p {
+body.dark-mode h2{
   color: #FFFFFF; 
+}
+
+body.dark-mode p {
+  color:brown
 }
 
 body.dark-mode .card {
