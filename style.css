@@ -14,13 +14,44 @@ body {
 }
 
 body.dark-mode {
-  background-color: #1a1a1a;
+  background-color: #121212;
   color: #ffffff;
 }
 
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode p {
+  color: #FFFFFF; 
+}
+
 body.dark-mode .card {
-  background-color: #333;
-  color: #eee;
+  background-color: #1E1E1E; 
+  color: #E0E0E0;
+  border: 1px solid #333333; 
+}
+
+body.dark-mode section#aboutme.card,
+body.dark-mode section#skills.card,
+body.dark-mode section#projects.card,
+body.dark-mode section#experiences.card,
+body.dark-mode section#formation.card,
+body.dark-mode section#passions.card,
+body.dark-mode section#languages.card {
+  background-color: #1E1E1E;
+  color: #E0E0E0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode h1, 
+body.dark-mode h2 {
+  color: #F5F5F5;/
+}
+
+body.dark-mode p.aboutme {
+  color: #E0E0E0;
 }
 
 /* En-têtes */
@@ -158,7 +189,6 @@ p, .aboutme, li {
 }
 
 /* Menu Burger */
-/* Style global pour le menu burger */
 .menu-toggle {
   display: block;
   position: fixed;
@@ -208,30 +238,30 @@ p, .aboutme, li {
   max-width: 260px;
   margin: 10px auto;
   padding: 15px;
-  background-color: #4a4e69; /* Couleur de fond des éléments */
-  color: #f2e9e4; /* Couleur du texte des éléments */
+  background-color: #4a4e69; 
+  color: #f2e9e4; 
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-  text-align: center; /* Centre le texte */
+  text-align: center; 
 }
 
 .sticky-nav ul li a {
-  color: #f2e9e4; /* Couleur de texte des liens */
-  text-decoration: none; /* Supprime la sous-ligne des liens */
+  color: #f2e9e4;
+  text-decoration: none; 
   width: 100%;
   padding: 15px;
   display: block;
 }
 
 .sticky-nav ul li:hover {
-  background-color: #9a8c98; /* Couleur de fond au survol */
-  color: #22223b; /* Couleur du texte au survol */
+  background-color: #9a8c98; 
+  color: #22223b; 
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .sticky-nav ul li a:hover {
-  color: #22223b; /* Couleur du texte au survol des liens */
+  color: #22223b;
 }
 
 /* Séparateur */
