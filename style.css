@@ -454,6 +454,7 @@ li {
 /* Cartes et Listes */
 .card,
 li {
+  text-decoration: none;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, background-color 0.3s ease,
@@ -462,6 +463,7 @@ li {
 
 /* Style pour .card */
 .card {
+  text-decoration: none;
   background: #ffffff; 
   color: #1a1a1a;
   padding: 25px;
@@ -484,6 +486,7 @@ li {
 }
 /* Style des compétences */
 .skills li {
+  text-decoration: none;
   background-color: #e6f7ff; 
   color: #003366; 
   padding: 10px 15px;
@@ -498,6 +501,7 @@ li {
 }
 /* Style pour ul li */
 ul li {
+  list-style: none;
   background-color: #e6f7ff; 
   color: #003366;
   padding: 10px 15px;
@@ -571,47 +575,6 @@ ul li:hover {
   }
 }
 
-/* Styles pour les réseaux sociaux */
-.social-icons a {
-  text-decoration: none;
-  font-size: 1.5rem;
-  color: inherit;
-  transition: color 0.3s ease;
-}
-
-.email-icon {
-  color: #ff5733;
-  /* Couleur par défaut pour l'icône de mail */
-  transition: color 0.3s ease;
-  /* Transition douce */
-}
-
-.email-icon:hover {
-  color: #c70039;
-  /* Couleur au survol pour l'icône de mail */
-}
-
-.linkedin-icon {
-  color: #0077b5;
-  /* Couleur par défaut pour LinkedIn */
-  transition: color 0.3s ease;
-}
-
-.linkedin-icon:hover {
-  color: #005582;
-  /* Couleur au survol pour LinkedIn */
-}
-
-.github-icon {
-  color: #333;
-  /* Couleur par défaut pour GitHub */
-  transition: color 0.3s ease;
-}
-
-.github-icon:hover {
-  color: #24292e;
-  /* Couleur au survol pour GitHub */
-}
 /* Style pour le bouton menu hamburger */
 .menu-toggle {
   display: block;
@@ -627,7 +590,6 @@ ul li:hover {
 }
 
 /* Menu de Navigation Collant pour Mobile et Tablette */
-
 
     .menu-toggle {
         display: block;
