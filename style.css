@@ -310,8 +310,8 @@ p, .aboutme, li {
   }
 
   .profile-photo {
-    width: 150px;
-    height: 150px;
+    width: 235px;
+    height: 235px;
   }
 
   .card {
@@ -327,8 +327,6 @@ p, .aboutme, li {
     padding: 40px;
   }
 }
-
-Explication des Modifica
 
 /* Styles de base */
 body {
