@@ -50,8 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (localStorage.getItem("darkMode") === "true") {
     console.log("Mode sombre activé au chargement");
     document.body.classList.add("dark-mode");
-    document
-    .querySelector(".theme-switch__checkbox").checked = true;
+    document.querySelector(".theme-switch__checkbox").checked = true;
   }
   // Enregistre la préférence de l'utilisateur dans le stockage local
   const isDarkMode = document.body.classList.contains("dark-mode");
@@ -94,14 +93,17 @@ function resetTypeWriter() {
 }
 
 // Intersection Observer pour vérifier la visibilité
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting && !isTyping) {
-      isTyping = true;
-      typeWriter(); // Démarrer l'animation
-    }
-  });
-}, { threshold: 0.1 }); // Lancer lorsque 10% de l'élément est visible
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !isTyping) {
+        isTyping = true;
+        typeWriter(); // Démarrer l'animation
+      }
+    });
+  },
+  { threshold: 0.1 }
+); // Lancer lorsque 10% de l'élément est visible
 
 // Observer l'élément de texte
 observer.observe(document.getElementById("typewriter"));
