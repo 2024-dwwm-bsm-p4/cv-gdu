@@ -66,3 +66,42 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+
+// Texte à animer
+const textArray = "Développeur web / web mobile";
+let index = 0;
+let isTyping = false;
+
+// Fonction machine à écrire
+function typeWriter() {
+  if (index < textArray.length) {
+    document.getElementById("text").textContent += textArray.charAt(index);
+    index++;
+    setTimeout(typeWriter, 100); // Délai entre chaque lettre
+  } else {
+    // Attendre 2 secondes avant de recommencer
+    setTimeout(() => {
+      resetTypeWriter();
+    }, 2000);
+  }
+}
+
+// Réinitialiser l'animation
+function resetTypeWriter() {
+  document.getElementById("text").textContent = "";
+  index = 0;
+  typeWriter();
+}
+
+// Intersection Observer pour vérifier la visibilité
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting && !isTyping) {
+      isTyping = true;
+      typeWriter(); // Démarrer l'animation
+    }
+  });
+}, { threshold: 0.1 }); // Lancer lorsque 10% de l'élément est visible
+
+// Observer l'élément de texte
+observer.observe(document.getElementById("typewriter"));

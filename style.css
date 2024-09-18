@@ -125,6 +125,10 @@ p, .aboutme, li {
   align-items: center;
   gap: 10px;
   margin-top: 0;
+  min-width: 200px; /* Ajuste cette valeur à la taille voulue */
+  max-width: 300px;
+  text-align: center;
+  border: none;
   border-radius: 10px;
   padding: 10px 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -588,4 +592,24 @@ p, .aboutme, li {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+#typewriter {
+  font-family: "Courier", monospace;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#cursor {
+  display: inline-block;
+  animation: blink 1s infinite step-start;
+}
+
+@keyframes blink {
+  50% {
+      opacity: 0;
+  }
 }
