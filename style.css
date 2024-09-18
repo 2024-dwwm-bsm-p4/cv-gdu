@@ -1,4 +1,4 @@
-/* Style de base */
+/* Base styles */
 * {
   scroll-behavior: smooth;
 }
@@ -68,7 +68,7 @@ body.dark-mode h3 {
 #aboutme p {
   line-height: 1.6;
 }
-/* En-têtes */
+
 h1, h2 {
   margin-bottom: 20px;
   color: #0b3d91;
@@ -190,21 +190,6 @@ p, .aboutme, li {
   transform: scale(1.1);
 }
 
-/* Tooltip (nom de l'icône au survol) */
-.skills-icons .icon::before {
-  position: absolute;
-  bottom: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #333;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.8rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  white-space: nowrap;
-}
 
 .skills-icons .icon:hover::before {
   opacity: 1;
@@ -214,7 +199,7 @@ p, .aboutme, li {
   text-decoration : none;
 }
 
-/* Cartes et éléments de liste */
+/* Cards and lists */
 .card, li {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -257,7 +242,7 @@ p, .aboutme, li {
   transform: translateY(-5px);
 }
 
-/* Menu Burger */
+/* Hamburger menu */
 .menu-toggle {
   display: block;
   position: fixed;
@@ -271,7 +256,7 @@ p, .aboutme, li {
   cursor: pointer;
 }
 
-/* Style du menu burger */
+/* Hamburger menu styles*/
 .sticky-nav {
   display: none; 
   position: fixed;
@@ -333,7 +318,7 @@ p, .aboutme, li {
   color: #22223b;
 }
 
-/* Séparateur */
+/* Separator */
 .separator {
   width: 0;
   height: 5px;
@@ -382,7 +367,7 @@ p, .aboutme, li {
   transform: translateY(-3px);
 }
 
-/* Icônes de réseaux sociaux */
+/* Social media icons */
 .social-network h3 {
   font-size: 1rem; 
   margin-bottom: 10px;
@@ -443,7 +428,7 @@ p, .aboutme, li {
   }
 }
 
-/* Styles pour les écrans de bureau (large) */
+/* Styles for desktop (large) screens */
 @media (min-width: 1200px) {
   .sticky-nav {
     display: none; 
