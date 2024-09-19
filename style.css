@@ -23,6 +23,8 @@ body {
   overflow: hidden;
   z-index: -1;
   pointer-events: none;
+  overflow: hidden;
+  will-change: transform, opacity;
 }
 
 .star-field .star {

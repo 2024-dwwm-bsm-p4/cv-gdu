@@ -159,3 +159,10 @@ for (let i = 0; i < starCount; i++) {
 
   starField.appendChild(star);
 }
+window.addEventListener('load', () => {
+  const starField = document.querySelector('.star-field');
+  starField.style.height = `${window.innerHeight}px`;
+  window.addEventListener('resize', () => {
+    starField.style.height = `${window.innerHeight}px`;
+  });
+});
