@@ -94,29 +94,26 @@ function typeWriter() {
   const currentPhrase = textArray[currentPhraseIndex];
   
   if (isDeleting) {
-    // Effacer le texte
     textElement.textContent = currentPhrase.substring(0, charIndex--);
     if (charIndex < 0) {
       isDeleting = false;
-      currentPhraseIndex = (currentPhraseIndex + 1) % textArray.length; // Passer à la phrase suivante
-      setTimeout(typeWriter, 500);  // Petit délai avant de recommencer à écrire
+      currentPhraseIndex = (currentPhraseIndex + 1) % textArray.length; 
+      setTimeout(typeWriter, 500); 
     } else {
-      setTimeout(typeWriter, 50); // Suppression plus rapide
+      setTimeout(typeWriter, 50); 
     }
   } else {
-    // Ajouter du texte
-    textElement.textContent = currentPhrase.substring(0, charIndex + 1); // +1 ici pour inclure la dernière lettre
+    textElement.textContent = currentPhrase.substring(0, charIndex + 1); 
     if (charIndex === currentPhrase.length - 1) {
       isDeleting = true;
-      setTimeout(typeWriter, 2000); // Pause avant de commencer à effacer
+      setTimeout(typeWriter, 2000); 
     } else {
-      charIndex++; // Incrémenter charIndex après l'affichage
-      setTimeout(typeWriter, 100); // Vitesse de frappe
+      charIndex++;
+      setTimeout(typeWriter, 100);
     }
   }
 }
 
-// Initialiser la machine à écrire au moment où l'élément entre dans le viewport
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
