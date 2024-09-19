@@ -81,6 +81,7 @@ h1 {
 }
 
 h2 {
+  margin-bottom: 30px;
   font-weight: 600;
   font-size: 2rem;
 }
@@ -89,6 +90,10 @@ p, .aboutme, li {
   font-weight: 400;
   font-size: 1rem;
   color: #1a1a40;
+}
+
+p, ul {
+  margin-bottom: 20px;
 }
 
 .age-info {
@@ -240,6 +245,35 @@ p, .aboutme, li {
 .skills li:hover, ul li:hover {
   background-color: #cce7ff;
   transform: translateY(-5px);
+}
+
+.project-item {
+  margin-bottom: 20px;
+}
+
+.project-item h3 {
+  font-size: 1.5rem; 
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.project-item ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.project-item li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.project-item li strong {
+  color: #1a1a40;
 }
 
 /* Hamburger menu */

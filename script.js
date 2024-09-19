@@ -25,6 +25,15 @@ document.addEventListener("DOMContentLoaded", function () {
     stickyNav.classList.toggle("active");
   });
 
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
   // Closing the hamburger menu after click
   document.querySelectorAll(".sticky-nav ul li a").forEach((link) => {
     link.addEventListener("click", function () {
@@ -67,28 +76,47 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 // Text to animate
-const textArray = "Développeur web / web mobile";
+const textArray = [
+  "Développeur web / web mobile",
+  "Passionné par la technologie",
+  "Prêt pour de nouveaux défis",
+  "Créatif et orienté solutions",
+  "En quête d'apprentissage"
+];
 let index = 0;
+let charIndex = 0;
+let currentPhraseIndex = 0;
 let isTyping = false;
+let isDeleting = false;
 
 function typeWriter() {
-  if (index < textArray.length) {
-    document.getElementById("text").textContent += textArray.charAt(index);
-    index++;
-    setTimeout(typeWriter, 100);
+  const textElement = document.getElementById("text");
+  const currentPhrase = textArray[currentPhraseIndex];
+  
+  if (isDeleting) {
+    // Effacer le texte
+    textElement.textContent = currentPhrase.substring(0, charIndex--);
+    if (charIndex < 0) {
+      isDeleting = false;
+      currentPhraseIndex = (currentPhraseIndex + 1) % textArray.length; // Passer à la phrase suivante
+      setTimeout(typeWriter, 500);  // Petit délai avant de recommencer à écrire
+    } else {
+      setTimeout(typeWriter, 50); // Suppression plus rapide
+    }
   } else {
-    setTimeout(() => {
-      resetTypeWriter();
-    }, 2000);
+    // Ajouter du texte
+    textElement.textContent = currentPhrase.substring(0, charIndex + 1); // +1 ici pour inclure la dernière lettre
+    if (charIndex === currentPhrase.length - 1) {
+      isDeleting = true;
+      setTimeout(typeWriter, 2000); // Pause avant de commencer à effacer
+    } else {
+      charIndex++; // Incrémenter charIndex après l'affichage
+      setTimeout(typeWriter, 100); // Vitesse de frappe
+    }
   }
 }
 
-function resetTypeWriter() {
-  document.getElementById("text").textContent = "";
-  index = 0;
-  typeWriter();
-}
-
+// Initialiser la machine à écrire au moment où l'élément entre dans le viewport
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
