@@ -75,6 +75,11 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
+document.querySelector('.back-to-top').addEventListener('click', function(e) {
+  e.preventDefault();
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}); 
+
 // Text to animate
 const textArray = [
   "Développeur web / web mobile",
