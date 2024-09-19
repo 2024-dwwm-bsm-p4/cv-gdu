@@ -132,3 +132,30 @@ const observer = new IntersectionObserver(
 ); 
 
 observer.observe(document.getElementById("typewriter"));
+
+// Stars
+
+const starField = document.querySelector('.star-field');
+const starCount = 100;
+
+for (let i = 0; i < starCount; i++) {
+  const star = document.createElement('div');
+  star.classList.add('star');
+  
+  const posX = Math.random() * 100; 
+  const posY = Math.random() * 100; 
+  
+  star.style.left = `${posX}%`;
+  star.style.top = `${posY}%`;
+
+  const starSize = Math.random() * 2 + 1;
+  star.style.width = `${starSize}px`;
+  star.style.height = `${starSize}px`;
+
+  const moveX = Math.random() * 200 - 100; 
+  const moveY = Math.random() * 200 - 100;
+  star.style.setProperty('--moveX', `${moveX}px`);
+  star.style.setProperty('--moveY', `${moveY}px`);
+
+  starField.appendChild(star);
+}
