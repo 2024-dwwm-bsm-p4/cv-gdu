@@ -44,20 +44,16 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .querySelector(".theme-switch__checkbox")
     .addEventListener("change", function () {
-      console.log("Checkbox changed");
       document.body.classList.toggle("dark-mode");
       if (this.checked) {
         localStorage.setItem("darkMode", true);
-        console.log("dark mode true");
       } else {
         localStorage.setItem("darkMode", false);
-        console.log("dark mode false");
       }
     });
 
   // Check the dark mode state from local storage
   if (localStorage.getItem("darkMode") === "true") {
-    console.log("Mode sombre activé au chargement");
     document.body.classList.add("dark-mode");
     document.querySelector(".theme-switch__checkbox").checked = true;
   }
